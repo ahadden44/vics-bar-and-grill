@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vic's Bar & Grill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Vic's Bar & Grill</h1>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2>Welcome to Vic's Bar & Grill</h2>
+          <p>Good food, cold drinks, and great company — your local neighborhood spot.</p>
+          <a class="btn" href="menu.html">See Our Menu</a>
+        </div>
+      </section>
+
+      <section class="intro container">
+        <h3>What we offer</h3>
+        <div class="grid">
+          <div>
+            <h4>Casual Dining</h4>
+            <p>Classic bar & grill favorites — burgers, sandwiches, fish & chips, and more.</p>
+          </div>
+          <div>
+            <h4>Events & Live Music</h4>
+            <p>Weekly events and live music nights — check our Events page for the calendar.</p>
+          </div>
+          <div>
+            <h4>Private Parties</h4>
+            <p>Book our space for birthdays, work events, and celebrations.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Vic's Bar & Grill — All rights reserved.</p>
+        <p>Address: 7900 Example St, City, State • Phone: (555) 123-4567</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

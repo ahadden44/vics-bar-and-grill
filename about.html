@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Vic's Bar & Grill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Vic's Bar & Grill</h1>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>About Us</h2>
+      <p>
+        Vic's Bar & Grill is a family-friendly neighborhood pub serving hearty, made-to-order
+        meals and a full bar. We pride ourselves on friendly service, classic comfort food,
+        and a welcoming atmosphere.
+      </p>
+
+      <h3>Our Story</h3>
+      <p>
+        Established locally, we've been serving the community through weekday lunches, weekend
+        dinners, and special events. Our menu mixes bar favorites with house specialties.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Vic's Bar & Grill</p>
+      </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

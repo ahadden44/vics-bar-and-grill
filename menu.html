@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Menu — Vic's Bar & Grill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Vic's Bar & Grill</h1>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Menu</h2>
+      <p>Below are sample sections for the menu. Prices are placeholders.</p>
+
+      <section class="menu-section">
+        <h3>Sandwiches & Burgers</h3>
+        <ul class="menu-list">
+          <li>
+            <strong>Classic Burger</strong>
+            <span class="price">$11.95</span>
+            <p>Beef patty, lettuce, tomato, onion, pickles, house sauce.</p>
+          </li>
+          <li>
+            <strong>Reuben</strong>
+            <span class="price">$10.95</span>
+            <p>Corned beef, Swiss, sauerkraut, thousand island, toasted marble rye.</p>
+          </li>
+          <li>
+            <strong>Grilled Chicken Sandwich</strong>
+            <span class="price">$9.95</span>
+            <p>Marinated grilled chicken, lettuce, tomato, mayo.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Entrees</h3>
+        <ul class="menu-list">
+          <li>
+            <strong>Fish & Chips</strong>
+            <span class="price">$13.95</span>
+            <p>Battered cod, fries, tartar sauce, coleslaw.</p>
+          </li>
+          <li>
+            <strong>Shepherd's Pie</strong>
+            <span class="price">$10.25</span>
+            <p>Classic shepherd's pie topped with mashed potatoes and cheddar.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Sides & Extras</h3>
+        <ul class="menu-list">
+          <li><strong>French Fries</strong><span class="price">$4.50</span></li>
+          <li><strong>Onion Rings</strong><span class="price">$5.50</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Vic's Bar & Grill</p>
+      </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

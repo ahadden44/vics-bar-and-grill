@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Events — Vic's Bar & Grill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Vic's Bar & Grill</h1>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Upcoming Events</h2>
+      <p>Check back often — we update this calendar with live music, trivia nights, and special events.</p>
+
+      <ul class="events-list">
+        <li>
+          <strong>Friday Live Music</strong>
+          <span class="date">Every Friday • 8pm</span>
+          <p>Local bands play a mix of rock, country, and blues.</p>
+        </li>
+        <li>
+          <strong>Tuesday Trivia Night</strong>
+          <span class="date">Tuesdays • 7pm</span>
+          <p>Teams welcome — prizes for top three.</p>
+        </li>
+        <li>
+          <strong>Monthly Karaoke</strong>
+          <span class="date">Last Saturday of the month • 9pm</span>
+          <p>Sing your heart out — fun for groups.</p>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Vic's Bar & Grill</p>
+      </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
