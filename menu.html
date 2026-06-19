@@ -36,18 +36,22 @@
       <section class="page-hero menu-hero">
         <div class="container">
           <h1>Menus</h1>
-          <p>Find your favorites from our burgers, bar plates, drinks, and sides.</p>
+          <p>Pick a category above to reveal our breakfast, lunch, drinks, or sides menu.</p>
         </div>
       </section>
 
       <section class="container menu-tabs" aria-label="Menu categories">
-        <button class="menu-tab active" type="button" data-target="breakfast">Breakfast</button>
+        <button class="menu-tab" type="button" data-target="breakfast">Breakfast</button>
         <button class="menu-tab" type="button" data-target="lunch">Lunch & Dinner</button>
         <button class="menu-tab" type="button" data-target="drinks">Drinks</button>
         <button class="menu-tab" type="button" data-target="sides">Sides & Extras</button>
       </section>
 
-      <section class="container menu-section" id="breakfast">
+      <section class="container menu-empty-state" id="menu-empty-state">
+        <p>Select a category above to view the menu items.</p>
+      </section>
+
+      <section class="container menu-section hidden" id="breakfast">
         <div class="section-header">
           <div>
             <h2>Breakfast Menu</h2>
@@ -89,7 +93,7 @@
 
       <section class="container menu-section hidden" id="lunch">
         <div class="section-header reverse">
-          <img class="section-image" src="images/menu-lunch.svg" alt="Lunch and dinner menu" />
+          <img class="section-image" src="images/menu1.jpg" alt="Lunch and dinner menu" />
           <div>
             <h2>Lunch & Dinner</h2>
             <p>Classic bar plates and dinner favorites served fresh all day.</p>
@@ -226,16 +230,20 @@
 
       const menuTabs = document.querySelectorAll('.menu-tab');
       const menuSections = document.querySelectorAll('.menu-section');
+      const menuEmptyState = document.getElementById('menu-empty-state');
+      const validSections = ['breakfast', 'lunch', 'drinks', 'sides'];
 
       function showMenuSection(targetId) {
+        const hasTarget = validSections.includes(targetId);
         menuSections.forEach(section => {
-          section.classList.toggle('hidden', section.id !== targetId);
+          section.classList.toggle('hidden', !hasTarget || section.id !== targetId);
         });
         menuTabs.forEach(tab => {
           const isActive = tab.dataset.target === targetId;
           tab.classList.toggle('active', isActive);
           tab.setAttribute('aria-pressed', isActive);
         });
+        menuEmptyState.classList.toggle('hidden', hasTarget);
       }
 
       menuTabs.forEach(tab => {
@@ -246,8 +254,7 @@
       });
 
       const requestedSection = location.hash.replace('#', '');
-      const validSections = ['breakfast', 'lunch', 'drinks', 'sides'];
-      const startingSection = validSections.includes(requestedSection) ? requestedSection : 'breakfast';
+      const startingSection = validSections.includes(requestedSection) ? requestedSection : null;
       showMenuSection(startingSection);
     </script>
   </body>
