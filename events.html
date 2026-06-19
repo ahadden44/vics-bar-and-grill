@@ -3,8 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="See upcoming live music, trivia, karaoke, and game day specials at Vic's Bar & Grill in St. Louis Park." />
+    <meta name="keywords" content="St. Louis Park events, bar live music, trivia night, karaoke, Vic's" />
     <title>Events — Vic's Bar & Grill</title>
     <link rel="stylesheet" href="styles.css?v=20260619" />
+    <script src="app.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarOrPub",
+        "name": "Vic's Bar & Grill",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7900 Example St",
+          "addressLocality": "St. Louis Park",
+          "addressRegion": "MN"
+        },
+        "event": [
+          {
+            "@type": "Event",
+            "name": "Friday Live Music",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "location": {
+              "@type": "Place",
+              "name": "Vic's Bar & Grill"
+            }
+          },
+          {
+            "@type": "Event",
+            "name": "Trivia Night",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "location": {
+              "@type": "Place",
+              "name": "Vic's Bar & Grill"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -14,6 +52,7 @@
             <img class="top-brand-logo" src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
             <span class="top-brand">Vic's Bar & Grill</span>
           </div>
+          <button class="mode-toggle" type="button" aria-label="Toggle neon mode" aria-pressed="false">Neon Mode</button>
         </div>
       </div>
       <div class="container nav-wrap">

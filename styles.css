@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700;800&display=swap');
+
 /* Theme variables */
 :root {
   --bg: #d8cfbb;
@@ -11,22 +13,46 @@
   --primary-soft: #f4dbd8;
   --border: rgba(46, 98, 143, .2);
   --shadow: 0 18px 40px rgba(27, 48, 79, .12);
+  --headline-font: 'Bebas Neue', 'Impact', sans-serif;
+  --body-font: 'Source Sans 3', 'Segoe UI', sans-serif;
 }
 
+html { scroll-behavior:smooth; }
 * { box-sizing: border-box; }
-body { margin:0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--text); background: linear-gradient(180deg, #e3dac8 0%, var(--bg) 100%); overflow-x:hidden; }
+body { margin:0; font-family: var(--body-font); color: var(--text); background: linear-gradient(180deg, #e3dac8 0%, var(--bg) 100%); overflow-x:hidden; }
 img { max-width:100%; display:block; }
 .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+body.neon-mode {
+  --bg: #111923;
+  --surface: #1a2533;
+  --surface-soft: #233246;
+  --text: #e9f2ff;
+  --text-muted: #b6c4db;
+  --accent: #25a7ff;
+  --accent-soft: #15344d;
+  --primary: #ff4f7b;
+  --primary-soft: #4d1f2e;
+  --border: rgba(37, 167, 255, .35);
+  --shadow: 0 18px 40px rgba(0, 0, 0, .45);
+}
+
+h1, h2, h3, .nav a, .top-brand, .menu-tab, .feature-link {
+  font-family: var(--headline-font);
+  letter-spacing: .04em;
+}
 
 a { color:inherit; text-decoration:none; }
 button, .btn { cursor:pointer; font-family:inherit; }
 
 .site-header { background:var(--surface); color:var(--text); position:sticky; top:0; z-index:30; box-shadow:0 16px 40px rgba(27, 48, 79, .12); }
 .top-bar { background: var(--accent); }
-.top-bar-inner { display:flex; align-items:center; justify-content:center; gap:16px; padding:12px 0; }
+.top-bar-inner { display:flex; align-items:center; justify-content:center; gap:16px; padding:12px 0; position:relative; }
 .top-brand-wrap { display:inline-flex; align-items:center; gap:12px; }
 .top-brand-logo { width:34px; height:34px; object-fit:contain; border-radius:9px; background:#f4ecde; padding:5px; }
 .top-brand { color:#eef6ff; font-size:1.05rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.mode-toggle { position:absolute; right:0; top:50%; transform:translateY(-50%); border:1px solid rgba(255,255,255,.45); background:rgba(255,255,255,.12); color:#fff; border-radius:999px; padding:7px 12px; font-size:.75rem; font-weight:800; text-transform:uppercase; letter-spacing:.06em; }
+.mode-toggle:hover { background:rgba(255,255,255,.2); }
 
 .nav-wrap { display:flex; align-items:center; justify-content:center; padding:18px 0; }
 .brand { display:none; }
@@ -110,6 +136,28 @@ button, .btn { cursor:pointer; font-family:inherit; }
 .menu-item .price { color:var(--primary); font-weight:700; font-size:1rem; white-space:nowrap; }
 .menu-item p { margin:8px 0 0; color:var(--text-muted); line-height:1.6; }
 
+.features article,
+.menu-item.brief,
+.event-card,
+.contact-box,
+.image-card {
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.features article:hover,
+.menu-item.brief:hover,
+.event-card:hover,
+.contact-box:hover,
+.image-card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 22px 42px rgba(27, 48, 79, .22);
+  border-color:rgba(46, 98, 143, .42);
+}
+
+.menu-subhead { margin:34px 0 14px; font-size:1.7rem; border-left:4px solid var(--accent); padding-left:12px; }
+.menu-item h3 { font-size:1.2rem; }
+.menu-item .price { font-size:1.08rem; }
+
 .events-showcase { display:grid; grid-template-columns:1fr 1fr; gap:32px; padding:60px 0; }
 .event-card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:32px; box-shadow:var(--shadow); }
 .event-day { display:inline-block; background:var(--primary); color:#fff; padding:6px 12px; border-radius:6px; font-size:.8rem; font-weight:700; text-transform:uppercase; margin-bottom:12px; }
@@ -143,6 +191,28 @@ button, .btn { cursor:pointer; font-family:inherit; }
 .card-content h2 { margin:0 0 8px; }
 .card-content p { margin:0; color:rgba(255,255,255,.85); }
 
+.gallery-section { padding:0 0 80px; }
+.gallery-section h2 { margin:0 0 16px; font-size:2rem; }
+.gallery-slider { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(220px, 1fr); gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:10px; }
+.gallery-slide { scroll-snap-align:start; background:#f8f2e6; border:1px solid rgba(46, 98, 143, .3); border-radius:16px; overflow:hidden; box-shadow:0 12px 26px rgba(27, 48, 79, .14); min-height:260px; }
+.gallery-slide img { width:100%; height:170px; object-fit:cover; }
+.gallery-slide p { margin:0; padding:14px; color:var(--text-muted); line-height:1.55; }
+
+.event-card {
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.55), rgba(255,255,255,.15)),
+    radial-gradient(circle at top right, rgba(188,75,69,.16), transparent 60%),
+    var(--surface);
+  border:1px solid rgba(46, 98, 143, .28);
+}
+
+body.neon-mode .event-card {
+  background:
+    linear-gradient(160deg, rgba(37,167,255,.1), rgba(255,79,123,.05)),
+    var(--surface);
+  border-color:rgba(37,167,255,.38);
+}
+
 @media (max-width:1200px) {
   .events-showcase { grid-template-columns:1fr; }
   .section-header { flex-direction:column; align-items:flex-start; }
@@ -154,6 +224,7 @@ button, .btn { cursor:pointer; font-family:inherit; }
   .nav a { font-size:1rem; padding:12px 14px; }
   .features { grid-template-columns:1fr; }
   .image-grid { grid-template-columns:1fr; gap:20px; }
+  .gallery-slider { grid-auto-columns:minmax(240px, 82vw); }
   .content-grid { grid-template-columns:1fr; }
   .contact-grid { grid-template-columns:1fr; }
   .about-logo-panel { flex-direction:column; align-items:flex-start; }
@@ -167,6 +238,7 @@ button, .btn { cursor:pointer; font-family:inherit; }
   .top-brand-wrap { gap:10px; }
   .top-brand-logo { width:36px; height:36px; }
   .top-brand { font-size:1.15rem; letter-spacing:.11em; }
+  .mode-toggle { right:8px; padding:7px 10px; font-size:.68rem; }
   .nav-wrap { display:grid; grid-template-columns:auto; align-items:center; justify-content:start; gap:12px; padding:14px 0; }
   .menu-toggle { display:inline-flex; }
   .logo { width:40px; height:40px; padding:8px; }
@@ -218,6 +290,7 @@ button, .btn { cursor:pointer; font-family:inherit; }
   .top-bar-inner { padding:16px 0; }
   .top-brand-logo { width:34px; height:34px; }
   .top-brand { font-size:1.02rem; letter-spacing:.09em; }
+  .mode-toggle { padding:6px 9px; font-size:.64rem; }
   .nav-wrap { padding:10px 0; }
   .hero-content { padding:40px 0; }
   .hero h1 { font-size:1.85rem; }
