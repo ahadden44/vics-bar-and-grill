@@ -35,11 +35,9 @@ button, .btn { cursor:pointer; font-family:inherit; }
 .nav a:hover { color:var(--primary); }
 
 .hero { position:relative; min-height:620px; display:flex; align-items:center; }
-.hero::before { content:''; position:absolute; inset:0; background:url('images/outdoor.jpg') center/cover no-repeat; }
+.hero::before { content:''; position:absolute; inset:0; background:url('images/hero.svg') center/cover no-repeat; }
 .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(247,249,255,.84), rgba(247,249,255,.92)); }
 .hero-content { position:relative; padding:80px 0; max-width:720px; }
-.menu-hero-image { margin-top:32px; max-width:640px; }
-.menu-hero-image img { width:100%; border-radius:24px; box-shadow:0 24px 70px rgba(18,38,78,.16); }
 .eyebrow { display:inline-block; margin-bottom:18px; color:var(--accent); letter-spacing:.2em; text-transform:uppercase; font-size:.8rem; }
 .hero h1 { font-size:3.2rem; line-height:1.05; margin:0 0 24px; }
 .hero p { max-width:680px; font-size:1.05rem; line-height:1.85; color:var(--text-muted); margin:0 0 32px; }
