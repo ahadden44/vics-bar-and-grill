@@ -40,11 +40,11 @@
         </div>
       </section>
 
-      <section class="container submenu-links">
-        <a class="submenu-link" href="#breakfast">Breakfast</a>
-        <a class="submenu-link" href="#lunch">Lunch & Dinner</a>
-        <a class="submenu-link" href="#drinks">Drinks</a>
-        <a class="submenu-link" href="#sides">Sides & Extras</a>
+      <section class="container menu-tabs" aria-label="Menu categories">
+        <button class="menu-tab active" type="button" data-target="breakfast">Breakfast</button>
+        <button class="menu-tab" type="button" data-target="lunch">Lunch & Dinner</button>
+        <button class="menu-tab" type="button" data-target="drinks">Drinks</button>
+        <button class="menu-tab" type="button" data-target="sides">Sides & Extras</button>
       </section>
 
       <section class="container menu-section" id="breakfast">
@@ -87,7 +87,7 @@
         </div>
       </section>
 
-      <section class="container menu-section" id="lunch">
+      <section class="container menu-section hidden" id="lunch">
         <div class="section-header reverse">
           <img class="section-image" src="images/menu-lunch.svg" alt="Lunch and dinner menu" />
           <div>
@@ -127,7 +127,7 @@
         </div>
       </section>
 
-      <section class="container menu-section" id="drinks">
+      <section class="container menu-section hidden" id="drinks">
         <div class="section-header">
           <div>
             <h2>Drinks</h2>
@@ -167,7 +167,7 @@
         </div>
       </section>
 
-      <section class="container menu-section" id="sides">
+      <section class="container menu-section hidden" id="sides">
         <div class="section-header reverse">
           <img class="section-image" src="images/menu-sides.svg" alt="Sides menu" />
           <div>
@@ -221,6 +221,34 @@
       </div>
     </footer>
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const menuTabs = document.querySelectorAll('.menu-tab');
+      const menuSections = document.querySelectorAll('.menu-section');
+
+      function showMenuSection(targetId) {
+        menuSections.forEach(section => {
+          section.classList.toggle('hidden', section.id !== targetId);
+        });
+        menuTabs.forEach(tab => {
+          const isActive = tab.dataset.target === targetId;
+          tab.classList.toggle('active', isActive);
+          tab.setAttribute('aria-pressed', isActive);
+        });
+      }
+
+      menuTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          showMenuSection(tab.dataset.target);
+          history.replaceState(null, '', `#${tab.dataset.target}`);
+        });
+      });
+
+      const requestedSection = location.hash.replace('#', '');
+      const validSections = ['breakfast', 'lunch', 'drinks', 'sides'];
+      const startingSection = validSections.includes(requestedSection) ? requestedSection : 'breakfast';
+      showMenuSection(startingSection);
+    </script>
   </body>
 </html>
