@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+  <rect width="260" height="260" rx="32" fill="#111" />
+  <circle cx="130" cy="90" r="50" fill="#d12226" />
+  <text x="130" y="150" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" fill="#fff" font-weight="700">VIC'S</text>
+  <text x="130" y="188" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#fff">BAR & GRILL</text>
+</svg>

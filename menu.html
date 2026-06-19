@@ -10,15 +10,15 @@
     <header class="site-header">
       <div class="top-bar">
         <div class="container top-bar-inner">
-          <a class="btn btn-primary" href="contact.html">Make Reservation</a>
-          <span class="top-text">Fresh food, cold drinks, local vibes.</span>
-          <a class="top-link" href="contact.html">(555) 123-4567</a>
+          <a class="btn btn-primary" href="contact.html">Reserve a Table</a>
+          <span class="top-text">Classic comfort food and cold beer.</span>
+          <a class="top-link" href="tel:5551234567">(555) 123-4567</a>
         </div>
       </div>
       <div class="container nav-wrap">
         <a class="brand" href="index.html">
-          <span class="brand-mark">V</span>
-          Vic's Bar & Grill
+          <img class="logo" src="images/logo.svg" alt="Vic's Bar & Grill logo" />
+          <span>Vic's Bar & Grill</span>
         </a>
         <nav>
           <ul class="nav">
@@ -33,115 +33,178 @@
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero menu-hero">
         <div class="container">
-          <h1>Our Menu</h1>
-          <p>Classics done right. Every plate made with care.</p>
+          <h1>Menus</h1>
+          <p>Choose from our signature breakfast, lunch, dinner, and drinks menus.</p>
         </div>
       </section>
 
-      <section class="container menu-grid">
-        <section class="menu-section">
-          <h2>Burgers & Sandwiches</h2>
-          <div class="menu-items">
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>The Vic's Classic</h3>
-                <span class="price">$13.95</span>
-              </div>
-              <p>Half-pound beef patty, aged cheddar, crispy bacon, grilled onions, house sauce on toasted brioche.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Reuben</h3>
-                <span class="price">$11.95</span>
-              </div>
-              <p>Slow-cooked corned beef, Swiss, sauerkraut, thousand island, marble rye toasted butter-crispy.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Grilled Chicken</h3>
-                <span class="price">$10.95</span>
-              </div>
-              <p>Marinated grilled chicken breast, swiss, tomato, lettuce, herb mayo, brioche.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Fish Sandwich</h3>
-                <span class="price">$11.95</span>
-              </div>
-              <p>Beer-battered cod, tartar sauce, coleslaw, toasted bun.</p>
-            </div>
-          </div>
-        </section>
+      <section class="container submenu-links">
+        <a class="submenu-link" href="#breakfast">Breakfast</a>
+        <a class="submenu-link" href="#lunch">Lunch & Dinner</a>
+        <a class="submenu-link" href="#drinks">Drinks</a>
+        <a class="submenu-link" href="#sides">Sides & Extras</a>
+      </section>
 
-        <section class="menu-section">
-          <h2>Entrees</h2>
-          <div class="menu-items">
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Fish & Chips</h3>
-                <span class="price">$15.95</span>
-              </div>
-              <p>Hand-battered Atlantic cod, crispy fries, coleslaw, tartar sauce.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Shepherd's Pie</h3>
-                <span class="price">$12.95</span>
-              </div>
-              <p>Slow-cooked beef and vegetables, topped with creamy mashed potatoes and sharp cheddar.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Grilled Steak</h3>
-                <span class="price">$17.95</span>
-              </div>
-              <p>10oz ribeye steak, garlic butter, seasonal vegetables, choice of potato.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Chicken Tenders & Fries</h3>
-                <span class="price">$11.95</span>
-              </div>
-              <p>Hand-breaded chicken tenders, crispy fries, dipping sauces.</p>
-            </div>
+      <section class="container menu-section" id="breakfast">
+        <div class="section-header">
+          <div>
+            <h2>Breakfast Menu</h2>
+            <p>Start your morning with hearty favorites and coffee made just right.</p>
           </div>
-        </section>
+          <img class="section-image" src="images/menu-breakfast.svg" alt="Breakfast menu" />
+        </div>
+        <div class="menu-items">
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Bacon & Egg Breakfast</h3>
+              <span class="price">$11.95</span>
+            </div>
+            <p>Two eggs any style, crispy bacon, toast, and home fries.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Pancake Stack</h3>
+              <span class="price">$9.95</span>
+            </div>
+            <p>Three buttermilk pancakes with butter and syrup.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Breakfast Burrito</h3>
+              <span class="price">$10.50</span>
+            </div>
+            <p>Eggs, sausage, cheese, potatoes, salsa, and sour cream wrapped warm.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Biscuits & Gravy</h3>
+              <span class="price">$10.25</span>
+            </div>
+            <p>House-made sausage gravy over flaky biscuits.</p>
+          </div>
+        </div>
+      </section>
 
-        <section class="menu-section">
-          <h2>Sides & Appetizers</h2>
-          <div class="menu-items">
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>French Fries</h3>
-                <span class="price">$4.50</span>
-              </div>
-              <p>Hand-cut and fried crispy.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Onion Rings</h3>
-                <span class="price">$5.50</span>
-              </div>
-              <p>Beer-battered, golden, and addictive.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Wings — Half Dozen</h3>
-                <span class="price">$7.95</span>
-              </div>
-              <p>Buffalo, BBQ, or Honey Garlic. Served with ranch.</p>
-            </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <h3>Loaded Nachos</h3>
-                <span class="price">$8.95</span>
-              </div>
-              <p>Crispy tortillas, cheese, jalapeños, sour cream, salsa.</p>
-            </div>
+      <section class="container menu-section" id="lunch">
+        <div class="section-header reverse">
+          <img class="section-image" src="images/menu-lunch.svg" alt="Lunch and dinner menu" />
+          <div>
+            <h2>Lunch & Dinner</h2>
+            <p>Classic bar plates and dinner favorites served fresh all day.</p>
           </div>
-        </section>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Pub Burger</h3>
+              <span class="price">$13.95</span>
+            </div>
+            <p>Angus beef, cheddar, bacon, lettuce, tomato, onion, house sauce, fries.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Reuben Sandwich</h3>
+              <span class="price">$12.95</span>
+            </div>
+            <p>Corned beef, Swiss, sauerkraut, 1000 island, grilled rye.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Fish & Chips</h3>
+              <span class="price">$15.95</span>
+            </div>
+            <p>Battered cod, fries, coleslaw, tartar sauce.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Chicken Parmesan</h3>
+              <span class="price">$16.95</span>
+            </div>
+            <p>Breaded chicken, marinara, melted mozzarella, spaghetti.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container menu-section" id="drinks">
+        <div class="section-header">
+          <div>
+            <h2>Drinks</h2>
+            <p>Cocktails, local drafts, wine, and non-alcoholic favorites.</p>
+          </div>
+          <img class="section-image" src="images/menu-drinks.svg" alt="Drinks menu" />
+        </div>
+        <div class="menu-items">
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>House Lager</h3>
+              <span class="price">$6.50</span>
+            </div>
+            <p>Refreshing draft with crisp finish.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>IPA</h3>
+              <span class="price">$7.25</span>
+            </div>
+            <p>Hoppy and bright with citrus notes.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Whiskey Sour</h3>
+              <span class="price">$9.95</span>
+            </div>
+            <p>Classic whiskey cocktail with lemon and a sweet finish.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>House Wine</h3>
+              <span class="price">$7.50</span>
+            </div>
+            <p>Red or white by the glass.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container menu-section" id="sides">
+        <div class="section-header reverse">
+          <img class="section-image" src="images/menu-sides.svg" alt="Sides menu" />
+          <div>
+            <h2>Sides & Extras</h2>
+            <p>Shareable starters and hearty sides to round out your meal.</p>
+          </div>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Onion Rings</h3>
+              <span class="price">$6.50</span>
+            </div>
+            <p>Crispy beer-battered rings with dipping sauce.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Loaded Fries</h3>
+              <span class="price">$8.50</span>
+            </div>
+            <p>Fries topped with cheese, bacon, green onions, and sauce.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Fried Pickles</h3>
+              <span class="price">$7.95</span>
+            </div>
+            <p>Crunchy and tangy with house ranch.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Mac & Cheese</h3>
+              <span class="price">$6.95</span>
+            </div>
+            <p>Creamy, cheesy, and baked to golden perfection.</p>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -157,8 +220,6 @@
         </div>
       </div>
     </footer>
-
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
