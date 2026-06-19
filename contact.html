@@ -34,7 +34,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <button class="nav-backdrop" type="button" aria-label="Close navigation"></button>
@@ -52,7 +52,7 @@
       <section class="container contact-grid">
         <div class="contact-box">
           <h2>Call Us</h2>
-          <p style="font-size:1.25rem; color:#d12226; font-weight:700; margin:16px 0;">(555) 123-4567</p>
+          <p style="font-size:1.25rem; color:#d12226; font-weight:700; margin:16px 0;"><a href="tel:5551234567">(555) 123-4567</a></p>
           <p>Open 7 days a week, 11 AM — 2 AM</p>
           <p style="margin-top:12px; color:#999;">Best for reservations and quick questions.</p>
         </div>
@@ -69,6 +69,25 @@
           <p style="font-size:1rem; color:#d12226; font-weight:600; margin:16px 0; word-break:break-all;">info@vicsbarandgrill.local</p>
           <p>We respond within 24 hours.</p>
           <p style="margin-top:12px; color:#999;">Great for event inquiries and feedback.</p>
+        </div>
+      </section>
+
+      <section class="container hours-map-section">
+        <div class="hours-card">
+          <h2>Hours</h2>
+          <div class="hours-grid">
+            <span>Monday</span><span>11:00 AM - 11:00 PM</span>
+            <span>Tuesday</span><span>11:00 AM - 11:00 PM</span>
+            <span>Wednesday</span><span>11:00 AM - 11:00 PM</span>
+            <span>Thursday</span><span>11:00 AM - 11:00 PM</span>
+            <span>Friday</span><span>11:00 AM - 1:00 AM</span>
+            <span>Saturday</span><span>11:00 AM - 1:00 AM</span>
+            <span>Sunday</span><span>11:00 AM - 10:00 PM</span>
+          </div>
+        </div>
+        <div class="map-card">
+          <h2>Find Us</h2>
+          <iframe title="Vic's Bar and Grill map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=St%20Louis%20Park%20MN&output=embed"></iframe>
         </div>
       </section>
 
@@ -100,9 +119,23 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
+          <div>
+            <p>© <span id="year"></span> Vic's Bar & Grill</p>
+            <p>7900 Example St, St. Louis Park, MN</p>
+          </div>
+        </div>
         <div>
-          <p>© <span id="year"></span> Vic's Bar & Grill</p>
-          <p>7900 Example St, City • (555) 123-4567</p>
+          <p><strong>Hours</strong></p>
+          <p>Mon-Thu 11AM-11PM</p>
+          <p>Fri-Sat 11AM-1AM</p>
+          <p>Sun 11AM-10PM</p>
+        </div>
+        <div class="footer-socials">
+          <a class="footer-link" href="#" aria-label="Facebook">Facebook</a>
+          <a class="footer-link" href="#" aria-label="Instagram">Instagram</a>
+          <a class="footer-link" href="#" aria-label="TikTok">TikTok</a>
         </div>
         <div class="footer-links">
           <a class="footer-link" href="contact.html">Contact</a>

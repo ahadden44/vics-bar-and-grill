@@ -30,7 +30,7 @@
         </a>
         <nav class="nav-panel" id="primary-nav">
           <ul class="nav">
-            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="events.html">Events</a></li>
@@ -47,52 +47,12 @@
         <div class="container hero-content">
           <span class="eyebrow">Neighborhood Corner Bar</span>
           <h1>Award-winning burgers, cold beer, and live music.</h1>
+          <p class="tagline">Cold drinks. Good food. Great people.</p>
           <p>Full bar, drink specials, friendly staff and a fun atmosphere. Our burgers are ground fresh daily with special spices that make them worth the drive.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="menu.html">View Menu</a>
             <a class="btn btn-secondary" href="events.html">See Events</a>
           </div>
-        </div>
-      </section>
-
-      <section class="image-showcase">
-        <div class="container image-grid">
-          <article class="image-card">
-            <img src="images/outdoor.jpg" alt="Outdoor seating at Vic's Bar & Grill" />
-            <div class="card-content">
-              <h2>Outdoor Seating</h2>
-              <p>Enjoy the fresh air and friendly atmosphere on our patio.</p>
-            </div>
-          </article>
-          <article class="image-card">
-            <img src="images/outdoor2.jpg" alt="Outdoor gathering space at Vic's Bar & Grill" />
-            <div class="card-content">
-              <h2>Local Events</h2>
-              <p>Perfect for game nights, trivia, and weekend specials with friends.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="container gallery-section">
-        <h2>Inside Vic's</h2>
-        <div class="gallery-slider" aria-label="Photo gallery">
-          <article class="gallery-slide">
-            <img src="images/burger.jpg" alt="Award-winning burger at Vic's" />
-            <p>House-ground burgers and signature spice.</p>
-          </article>
-          <article class="gallery-slide">
-            <img src="images/outdoor.jpg" alt="Patio at Vic's Bar & Grill" />
-            <p>Patio nights, game-day crowds, and local vibes.</p>
-          </article>
-          <article class="gallery-slide">
-            <img src="images/outdoor2.jpg" alt="Guests gathering at Vic's" />
-            <p>Live music, trivia, and weekend energy.</p>
-          </article>
-          <article class="gallery-slide">
-            <img src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
-            <p>Neighborhood-owned and proudly local.</p>
-          </article>
         </div>
       </section>
 
@@ -113,13 +73,45 @@
           <a class="feature-link" href="events.html">View Events</a>
         </article>
       </section>
+
+      <section class="container week-section">
+        <h2>This Week at Vic's</h2>
+        <div class="week-grid">
+          <article class="week-card">
+            <h3>Tuesday Trivia</h3>
+            <p>7:00 PM - 9:00 PM</p>
+          </article>
+          <article class="week-card">
+            <h3>Friday Live Music</h3>
+            <p>8:00 PM - Close</p>
+          </article>
+          <article class="week-card">
+            <h3>Saturday Karaoke</h3>
+            <p>9:00 PM - Close</p>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
+          <div>
+            <p>© <span id="year"></span> Vic's Bar & Grill</p>
+            <p>7900 Example St, St. Louis Park, MN</p>
+          </div>
+        </div>
         <div>
-          <p>© <span id="year"></span> Vic's Bar & Grill</p>
-          <p>7900 Example St, City • (555) 123-4567</p>
+          <p><strong>Hours</strong></p>
+          <p>Mon-Thu 11AM-11PM</p>
+          <p>Fri-Sat 11AM-1AM</p>
+          <p>Sun 11AM-10PM</p>
+        </div>
+        <div class="footer-socials">
+          <a class="footer-link" href="#" aria-label="Facebook">Facebook</a>
+          <a class="footer-link" href="#" aria-label="Instagram">Instagram</a>
+          <a class="footer-link" href="#" aria-label="TikTok">TikTok</a>
         </div>
         <div class="footer-links">
           <a class="footer-link" href="contact.html">Contact</a>
