@@ -14,7 +14,7 @@
 }
 
 * { box-sizing: border-box; }
-body { margin:0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
+body { margin:0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); overflow-x:hidden; }
 img { max-width:100%; display:block; }
 .container { max-width:1200px; margin:0 auto; padding:0 24px; }
 
@@ -83,6 +83,10 @@ button, .btn { cursor:pointer; font-family:inherit; }
 .menu-section { margin-bottom:60px; }
 .menu-section.hidden { display:none; }
 .menu-note { margin:0 0 18px; color:var(--text-muted); font-style:italic; line-height:1.6; }
+.menu-jump-links { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 24px; }
+.menu-jump-links a { display:inline-flex; padding:10px 14px; border-radius:999px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; }
+.menu-jump-links a:hover { background:var(--surface-soft); }
+.menu-subhead { margin:30px 0 10px; font-size:1.45rem; color:var(--text); }
 
 .section-header { display:flex; align-items:center; justify-content:space-between; gap:32px; margin-bottom:36px; }
 .section-header.reverse { flex-direction:row-reverse; }
@@ -90,9 +94,9 @@ button, .btn { cursor:pointer; font-family:inherit; }
 
 .menu-items { display:grid; gap:24px; }
 .menu-item.brief { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:22px; box-shadow:var(--shadow); }
-.item-header { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px; }
+.item-header { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:8px; }
 .menu-item h3 { margin:0; font-size:1.05rem; color:var(--text); }
-.menu-item .price { color:var(--primary); font-weight:700; font-size:1rem; }
+.menu-item .price { color:var(--primary); font-weight:700; font-size:1rem; white-space:nowrap; }
 .menu-item p { margin:8px 0 0; color:var(--text-muted); line-height:1.6; }
 
 .events-showcase { display:grid; grid-template-columns:1fr 1fr; gap:32px; padding:60px 0; }
@@ -138,17 +142,36 @@ button, .btn { cursor:pointer; font-family:inherit; }
   .contact-grid { grid-template-columns:1fr; }
 }
 @media (max-width:720px) {
-  .top-bar-inner, .nav-wrap { flex-direction:column; align-items:flex-start; }
-  .nav { flex-wrap:wrap; gap:14px; }
-  .hero { min-height:520px; }
-  .hero h1 { font-size:2.6rem; }
+  .site-header { position:static; }
+  .container { padding:0 16px; }
+  .top-bar-inner { flex-direction:column; align-items:stretch; text-align:center; }
+  .top-text { font-size:.9rem; }
+  .nav-wrap { flex-direction:column; align-items:center; gap:12px; }
+  .brand { font-size:1.1rem; }
+  .nav { flex-wrap:wrap; justify-content:center; gap:10px 12px; width:100%; }
+  .nav a { font-size:.78rem; letter-spacing:.04em; }
+  .hero { min-height:auto; }
+  .hero-content { max-width:100%; padding:56px 0; }
+  .hero h1 { font-size:2.1rem; }
+  .hero p { font-size:1rem; line-height:1.65; }
   .page-hero h1 { font-size:2rem; }
+  .page-hero.menu-hero { min-height:320px; padding:44px 0; }
+  .menu-tabs { display:grid; grid-template-columns:1fr; gap:12px; padding:24px 0; }
+  .menu-tab { width:100%; min-width:0; padding:14px 18px; font-size:.9rem; }
+  .menu-jump-links { gap:8px; margin:0 0 18px; }
+  .menu-jump-links a { width:100%; justify-content:center; }
+  .menu-subhead { margin:24px 0 10px; font-size:1.25rem; }
+  .menu-section { margin-bottom:40px; }
+  .menu-item.brief { padding:16px; }
+  .item-header { flex-direction:column; align-items:flex-start; gap:4px; }
+  .menu-item .price { font-size:1.05rem; }
   .form-row { grid-template-columns:1fr; }
-  .menu-tabs { justify-content:flex-start; }
 }
 @media (max-width:520px) {
+  .container { padding:0 14px; }
   .top-bar-inner, .nav-wrap { padding:0; }
   .hero-content { padding:40px 0; }
-  .hero h1 { font-size:2.2rem; }
+  .hero h1 { font-size:1.85rem; }
   .btn { width:100%; justify-content:center; }
+  .page-hero h1 { font-size:1.8rem; }
 }

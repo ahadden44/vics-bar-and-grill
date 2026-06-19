@@ -36,22 +36,77 @@
       <section class="page-hero menu-hero">
         <div class="container">
           <h1>Menus</h1>
-          <p>Pick a category above to reveal appetizers, burgers, salads, baskets, sandwiches, pizzas, and extras.</p>
+          <p>Choose Breakfast or Lunch & Dinner, then use category headers to jump around the full menu.</p>
         </div>
       </section>
 
       <section class="container menu-tabs" aria-label="Menu categories">
-        <button class="menu-tab" type="button" data-target="appetizers">Appetizers</button>
-        <button class="menu-tab" type="button" data-target="burgers">Burgers</button>
-        <button class="menu-tab" type="button" data-target="salads">Fresh Salads</button>
-        <button class="menu-tab" type="button" data-target="baskets">Baskets</button>
-        <button class="menu-tab" type="button" data-target="sandwiches">Sandwiches</button>
-        <button class="menu-tab" type="button" data-target="pizzas">Pizzas</button>
-        <button class="menu-tab" type="button" data-target="extras">Extras</button>
+        <button class="menu-tab" type="button" data-target="breakfast">Breakfast</button>
+        <button class="menu-tab" type="button" data-target="lunchdinner">Lunch & Dinner</button>
       </section>
 
-      <section class="container menu-section hidden" id="appetizers">
-        <h2>Appetizers</h2>
+      <section class="container menu-section hidden" id="breakfast">
+        <h2>Breakfast</h2>
+        <p class="menu-note">Served Saturday and Sunday from 9:00 AM to Noon.</p>
+        <div class="menu-items">
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Classic Breakfast Plate</h3>
+              <span class="price">$11.50</span>
+            </div>
+            <p>Two eggs any style, bacon or sausage, hash browns, and toast.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Biscuits and Gravy</h3>
+              <span class="price">$10.50</span>
+            </div>
+            <p>Buttermilk biscuits topped with house sausage gravy and two eggs.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Breakfast Burrito</h3>
+              <span class="price">$11.95</span>
+            </div>
+            <p>Scrambled eggs, sausage, cheddar, peppers, onions, and hash browns with salsa and sour cream.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>French Toast Stack</h3>
+              <span class="price">$9.95</span>
+            </div>
+            <p>Texas toast dipped in cinnamon batter, grilled and served with syrup.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Breakfast Sandwich</h3>
+              <span class="price">$8.95</span>
+            </div>
+            <p>Egg, cheddar, and bacon on toasted sourdough. Add hash browns $2.</p>
+          </div>
+          <div class="menu-item brief">
+            <div class="item-header">
+              <h3>Pancake Combo</h3>
+              <span class="price">$10.95</span>
+            </div>
+            <p>Two pancakes, two eggs, and your choice of bacon or sausage.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container menu-section hidden" id="lunchdinner">
+        <h2>Lunch & Dinner</h2>
+        <nav class="menu-jump-links" aria-label="Lunch and dinner categories">
+          <a href="#ld-appetizers">Appetizers</a>
+          <a href="#ld-burgers">Burgers</a>
+          <a href="#ld-salads">Fresh Salads</a>
+          <a href="#ld-baskets">Baskets</a>
+          <a href="#ld-sandwiches">Sandwiches</a>
+          <a href="#ld-pizzas">Pizzas</a>
+          <a href="#ld-extras">Extras</a>
+        </nav>
+
+        <h3 class="menu-subhead" id="ld-appetizers">Appetizers</h3>
         <p class="menu-note">Sauces: Ranch, Spicy Buffalo, BBQ, Honey Mustard, Seasoned Sour Cream, Blue Cheese, Sweet & Sour, Sweet Chili.</p>
         <div class="menu-items">
           <div class="menu-item brief">
@@ -139,10 +194,8 @@
             <p>Eight pieces served with marinara sauce.</p>
           </div>
         </div>
-      </section>
 
-      <section class="container menu-section hidden" id="burgers">
-        <h2>Burgers</h2>
+        <h3 class="menu-subhead" id="ld-burgers">Burgers</h3>
         <p class="menu-note">Fresh, hand pattied burger served on a toasted, buttery bun with tangy dill pickles and potato chips or french fries. Substitute turkey patty $1. Substitute veggie impossible $3. Additional hamburger patty $4.</p>
         <div class="menu-items">
           <div class="menu-item brief">
@@ -216,10 +269,8 @@
             <p>Fried onions and melted Swiss served on rye toast.</p>
           </div>
         </div>
-      </section>
 
-      <section class="container menu-section hidden" id="salads">
-        <h2>Fresh Salads</h2>
+        <h3 class="menu-subhead" id="ld-salads">Fresh Salads</h3>
         <p class="menu-note">Dressings: Balsamic Vinaigrette, Blue Cheese, Caesar, French, Italian Light, Ranch, and Thousand Island.</p>
         <div class="menu-items">
           <div class="menu-item brief">
@@ -258,10 +309,8 @@
             <p>Smoked bacon, tomatoes, and blue cheese crumbles served with grilled diced chicken breast.</p>
           </div>
         </div>
-      </section>
 
-      <section class="container menu-section hidden" id="baskets">
-        <h2>Baskets</h2>
+        <h3 class="menu-subhead" id="ld-baskets">Baskets</h3>
         <div class="menu-items">
           <div class="menu-item brief">
             <div class="item-header">
@@ -341,10 +390,8 @@
             <p>Crispy tater tots.</p>
           </div>
         </div>
-      </section>
 
-      <section class="container menu-section hidden" id="sandwiches">
-        <h2>Sandwiches</h2>
+        <h3 class="menu-subhead" id="ld-sandwiches">Sandwiches</h3>
         <p class="menu-note">Served with tangy dill pickles and crispy potato chips or french fries.</p>
         <div class="menu-items">
           <div class="menu-item brief">
@@ -418,10 +465,8 @@
             <p>100% all-beef grilled hot dog served on a toasted bun.</p>
           </div>
         </div>
-      </section>
 
-      <section class="container menu-section hidden" id="pizzas">
-        <h2>Pizzas 12 inch</h2>
+        <h3 class="menu-subhead" id="ld-pizzas">Pizzas 12 inch</h3>
         <div class="menu-items">
           <div class="menu-item brief"><div class="item-header"><h3>Cheese</h3><span class="price">$10</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Pepperoni</h3><span class="price">$11</span></div></div>
@@ -430,10 +475,8 @@
           <div class="menu-item brief"><div class="item-header"><h3>Inferno</h3><span class="price">$13</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Deluxe</h3><span class="price">$13</span></div></div>
         </div>
-      </section>
 
-      <section class="container menu-section hidden" id="extras">
-        <h2>Extras</h2>
+        <h3 class="menu-subhead" id="ld-extras">Extras</h3>
         <div class="menu-items">
           <div class="menu-item brief"><div class="item-header"><h3>Additional sauces or sauerkraut</h3><span class="price">$0.50</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Cheese</h3><span class="price">$1</span></div></div>
@@ -463,7 +506,7 @@
 
       const menuTabs = document.querySelectorAll('.menu-tab');
       const menuSections = document.querySelectorAll('.menu-section');
-      const validSections = ['appetizers', 'burgers', 'salads', 'baskets', 'sandwiches', 'pizzas', 'extras'];
+      const validSections = ['breakfast', 'lunchdinner'];
 
       function showMenuSection(targetId) {
         const hasTarget = validSections.includes(targetId);
@@ -485,8 +528,15 @@
       });
 
       const requestedSection = location.hash.replace('#', '');
-      const startingSection = validSections.includes(requestedSection) ? requestedSection : null;
+      const startingSection = validSections.includes(requestedSection) ? requestedSection : (requestedSection.startsWith('ld-') ? 'lunchdinner' : null);
       showMenuSection(startingSection);
+
+      if (requestedSection.startsWith('ld-')) {
+        const jumpTarget = document.getElementById(requestedSection);
+        if (jumpTarget) {
+          jumpTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     </script>
   </body>
 </html>
