@@ -10,7 +10,10 @@
     <header class="site-header">
       <div class="top-bar">
         <div class="container top-bar-inner">
-          <span class="top-brand">Vic's Bar & Grill</span>
+          <div class="top-brand-wrap">
+            <img class="top-brand-logo" src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
+            <span class="top-brand">Vic's Bar & Grill</span>
+          </div>
         </div>
       </div>
       <div class="container nav-wrap">
@@ -558,7 +561,7 @@
       menuTabs.forEach(tab => {
         tab.addEventListener('click', () => {
           showMenuSection(tab.dataset.target);
-          history.replaceState(null, '', `#${tab.dataset.target}`);
+          history.replaceState(null, '', `${location.pathname}#${tab.dataset.target}`);
         });
       });
 
