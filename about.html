@@ -8,8 +8,18 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="brand">Vic's Bar & Grill</h1>
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <a class="btn btn-primary" href="menu.html">Order Online</a>
+          <span class="top-text">Fresh food, cold drinks, local vibes.</span>
+          <a class="top-link" href="contact.html">(555) 123-4567</a>
+        </div>
+      </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">V</span>
+          Vic's Bar & Grill
+        </a>
         <nav>
           <ul class="nav">
             <li><a href="index.html">Home</a></li>
@@ -22,24 +32,48 @@
       </div>
     </header>
 
-    <main class="container">
-      <h2>About Us</h2>
-      <p>
-        Vic's Bar & Grill is a family-friendly neighborhood pub serving hearty, made-to-order
-        meals and a full bar. We pride ourselves on friendly service, classic comfort food,
-        and a welcoming atmosphere.
-      </p>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>About Vic's</h1>
+          <p>A neighborhood legend since the day we opened our doors.</p>
+        </div>
+      </section>
 
-      <h3>Our Story</h3>
-      <p>
-        Established locally, we've been serving the community through weekday lunches, weekend
-        dinners, and special events. Our menu mixes bar favorites with house specialties.
-      </p>
+      <section class="container content-section">
+        <div class="content-grid">
+          <div>
+            <h2>Our Story</h2>
+            <p>Vic's Bar & Grill isn't just another place to grab a bite. We're a community hub where regulars become friends, strangers become neighbors, and every meal comes with a side of warmth.</p>
+            <p>For years, we've kept things simple: great food made fresh, a bar stocked with favorites, and staff that treats everyone like family.</p>
+          </div>
+          <div>
+            <h2>What Drives Us</h2>
+            <ul class="values-list">
+              <li><strong>Quality Food</strong> — Every dish starts with fresh ingredients and care.</li>
+              <li><strong>Real Hospitality</strong> — Your comfort matters more than the clock.</li>
+              <li><strong>Community First</strong> — We host your celebrations, your milestones, your ordinary Fridays.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="container content-section">
+        <h2>Your Neighborhood Gathering Spot</h2>
+        <p style="max-width:720px; margin:0 auto 24px; line-height:1.8;">Whether it's a casual lunch, weekend dinner with friends, trivia night, or a special event, Vic's is where you belong. We take pride in knowing your name, remembering your usual order, and making sure you feel at home.</p>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Vic's Bar & Grill</p>
+      <div class="container footer-inner">
+        <div>
+          <p>© <span id="year"></span> Vic's Bar & Grill</p>
+          <p>7900 Example St, City • (555) 123-4567</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="menu.html">Menu</a>
+        </div>
       </div>
     </footer>
 

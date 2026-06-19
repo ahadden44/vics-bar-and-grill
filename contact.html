@@ -8,8 +8,18 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="brand">Vic's Bar & Grill</h1>
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <a class="btn btn-primary" href="tel:5551234567">Call Now</a>
+          <span class="top-text">Fresh food, cold drinks, local vibes.</span>
+          <a class="top-link" href="tel:5551234567">(555) 123-4567</a>
+        </div>
+      </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">V</span>
+          Vic's Bar & Grill
+        </a>
         <nav>
           <ul class="nav">
             <li><a href="index.html">Home</a></li>
@@ -22,40 +32,74 @@
       </div>
     </header>
 
-    <main class="container contact-page">
-      <h2>Contact Us</h2>
-      <p>Call or email to make a reservation or book an event.</p>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Get In Touch</h1>
+          <p>Reservations, events, or just to say hello — we'd love to hear from you.</p>
+        </div>
+      </section>
 
-      <ul class="contact-info">
-        <li><strong>Phone:</strong> (555) 123-4567</li>
-        <li><strong>Email:</strong> info@vicsbarandgrill.example</li>
-        <li><strong>Address:</strong> 7900 Example St, City, State</li>
-      </ul>
+      <section class="container contact-grid">
+        <div class="contact-box">
+          <h2>Call Us</h2>
+          <p style="font-size:1.25rem; color:#d12226; font-weight:700; margin:16px 0;">(555) 123-4567</p>
+          <p>Open 7 days a week, 11 AM — 2 AM</p>
+          <p style="margin-top:12px; color:#999;">Best for reservations and quick questions.</p>
+        </div>
 
-      <h3>Send a message</h3>
-      <form class="contact-form" action="#" method="post">
-        <label>
-          Name
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button class="btn" type="submit">Send</button>
-      </form>
+        <div class="contact-box">
+          <h2>Visit Us</h2>
+          <p style="font-weight:600; margin:16px 0;">7900 Example St<br>City, State 12345</p>
+          <p>Parking available. Wheelchair accessible.</p>
+          <p style="margin-top:12px; color:#999;">Located in the heart of the neighborhood.</p>
+        </div>
+
+        <div class="contact-box">
+          <h2>Email</h2>
+          <p style="font-size:1rem; color:#d12226; font-weight:600; margin:16px 0; word-break:break-all;">info@vicsbarandgrill.local</p>
+          <p>We respond within 24 hours.</p>
+          <p style="margin-top:12px; color:#999;">Great for event inquiries and feedback.</p>
+        </div>
+      </section>
+
+      <section class="container contact-form-section">
+        <h2 style="text-align:center; margin-bottom:40px;">Send Us a Message</h2>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input id="name" type="text" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" name="subject" placeholder="Reservation, Event Inquiry, Feedback..." />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Vic's Bar & Grill</p>
+      <div class="container footer-inner">
+        <div>
+          <p>© <span id="year"></span> Vic's Bar & Grill</p>
+          <p>7900 Example St, City • (555) 123-4567</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="menu.html">Menu</a>
+        </div>
       </div>
     </footer>
 
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </body>
-</html>

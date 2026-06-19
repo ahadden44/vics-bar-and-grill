@@ -8,8 +8,18 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="brand">Vic's Bar & Grill</h1>
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <a class="btn btn-primary" href="contact.html">Make Reservation</a>
+          <span class="top-text">Fresh food, cold drinks, local vibes.</span>
+          <a class="top-link" href="contact.html">(555) 123-4567</a>
+        </div>
+      </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">V</span>
+          Vic's Bar & Grill
+        </a>
         <nav>
           <ul class="nav">
             <li><a href="index.html">Home</a></li>
@@ -22,61 +32,133 @@
       </div>
     </header>
 
-    <main class="container">
-      <h2>Menu</h2>
-      <p>Below are sample sections for the menu. Prices are placeholders.</p>
-
-      <section class="menu-section">
-        <h3>Sandwiches & Burgers</h3>
-        <ul class="menu-list">
-          <li>
-            <strong>Classic Burger</strong>
-            <span class="price">$11.95</span>
-            <p>Beef patty, lettuce, tomato, onion, pickles, house sauce.</p>
-          </li>
-          <li>
-            <strong>Reuben</strong>
-            <span class="price">$10.95</span>
-            <p>Corned beef, Swiss, sauerkraut, thousand island, toasted marble rye.</p>
-          </li>
-          <li>
-            <strong>Grilled Chicken Sandwich</strong>
-            <span class="price">$9.95</span>
-            <p>Marinated grilled chicken, lettuce, tomato, mayo.</p>
-          </li>
-        </ul>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Our Menu</h1>
+          <p>Classics done right. Every plate made with care.</p>
+        </div>
       </section>
 
-      <section class="menu-section">
-        <h3>Entrees</h3>
-        <ul class="menu-list">
-          <li>
-            <strong>Fish & Chips</strong>
-            <span class="price">$13.95</span>
-            <p>Battered cod, fries, tartar sauce, coleslaw.</p>
-          </li>
-          <li>
-            <strong>Shepherd's Pie</strong>
-            <span class="price">$10.25</span>
-            <p>Classic shepherd's pie topped with mashed potatoes and cheddar.</p>
-          </li>
-        </ul>
-      </section>
+      <section class="container menu-grid">
+        <section class="menu-section">
+          <h2>Burgers & Sandwiches</h2>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>The Vic's Classic</h3>
+                <span class="price">$13.95</span>
+              </div>
+              <p>Half-pound beef patty, aged cheddar, crispy bacon, grilled onions, house sauce on toasted brioche.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Reuben</h3>
+                <span class="price">$11.95</span>
+              </div>
+              <p>Slow-cooked corned beef, Swiss, sauerkraut, thousand island, marble rye toasted butter-crispy.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Grilled Chicken</h3>
+                <span class="price">$10.95</span>
+              </div>
+              <p>Marinated grilled chicken breast, swiss, tomato, lettuce, herb mayo, brioche.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Fish Sandwich</h3>
+                <span class="price">$11.95</span>
+              </div>
+              <p>Beer-battered cod, tartar sauce, coleslaw, toasted bun.</p>
+            </div>
+          </div>
+        </section>
 
-      <section class="menu-section">
-        <h3>Sides & Extras</h3>
-        <ul class="menu-list">
-          <li><strong>French Fries</strong><span class="price">$4.50</span></li>
-          <li><strong>Onion Rings</strong><span class="price">$5.50</span></li>
-        </ul>
+        <section class="menu-section">
+          <h2>Entrees</h2>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Fish & Chips</h3>
+                <span class="price">$15.95</span>
+              </div>
+              <p>Hand-battered Atlantic cod, crispy fries, coleslaw, tartar sauce.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Shepherd's Pie</h3>
+                <span class="price">$12.95</span>
+              </div>
+              <p>Slow-cooked beef and vegetables, topped with creamy mashed potatoes and sharp cheddar.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Grilled Steak</h3>
+                <span class="price">$17.95</span>
+              </div>
+              <p>10oz ribeye steak, garlic butter, seasonal vegetables, choice of potato.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Chicken Tenders & Fries</h3>
+                <span class="price">$11.95</span>
+              </div>
+              <p>Hand-breaded chicken tenders, crispy fries, dipping sauces.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <h2>Sides & Appetizers</h2>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>French Fries</h3>
+                <span class="price">$4.50</span>
+              </div>
+              <p>Hand-cut and fried crispy.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Onion Rings</h3>
+                <span class="price">$5.50</span>
+              </div>
+              <p>Beer-battered, golden, and addictive.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Wings — Half Dozen</h3>
+                <span class="price">$7.95</span>
+              </div>
+              <p>Buffalo, BBQ, or Honey Garlic. Served with ranch.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h3>Loaded Nachos</h3>
+                <span class="price">$8.95</span>
+              </div>
+              <p>Crispy tortillas, cheese, jalapeños, sour cream, salsa.</p>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Vic's Bar & Grill</p>
+      <div class="container footer-inner">
+        <div>
+          <p>© <span id="year"></span> Vic's Bar & Grill</p>
+          <p>7900 Example St, City • (555) 123-4567</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="menu.html">Menu</a>
+        </div>
       </div>
     </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
