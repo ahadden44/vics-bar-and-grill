@@ -8,8 +8,18 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="brand">Vic's Bar & Grill</h1>
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <a class="btn btn-primary" href="menu.html">Order Online</a>
+          <span class="top-text">Fresh food, cold drinks, local vibes.</span>
+          <a class="top-link" href="contact.html">(555) 123-4567</a>
+        </div>
+      </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">V</span>
+          Vic's Bar & Grill
+        </a>
         <nav>
           <ul class="nav">
             <li><a href="index.html">Home</a></li>
@@ -24,36 +34,44 @@
 
     <main>
       <section class="hero">
-        <div class="container">
-          <h2>Welcome to Vic's Bar & Grill</h2>
-          <p>Good food, cold drinks, and great company — your local neighborhood spot.</p>
-          <a class="btn" href="menu.html">See Our Menu</a>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="eyebrow">Neighborhood Bar & Grill</span>
+          <h1>Experience local flavor and good times at Vic's</h1>
+          <p>Warm atmosphere, hearty plates, and live events in a friendly neighborhood setting.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="menu.html">View Menu</a>
+            <a class="btn btn-secondary" href="events.html">See Events</a>
+          </div>
         </div>
       </section>
 
-      <section class="intro container">
-        <h3>What we offer</h3>
-        <div class="grid">
-          <div>
-            <h4>Casual Dining</h4>
-            <p>Classic bar & grill favorites — burgers, sandwiches, fish & chips, and more.</p>
-          </div>
-          <div>
-            <h4>Events & Live Music</h4>
-            <p>Weekly events and live music nights — check our Events page for the calendar.</p>
-          </div>
-          <div>
-            <h4>Private Parties</h4>
-            <p>Book our space for birthdays, work events, and celebrations.</p>
-          </div>
-        </div>
+      <section class="features container">
+        <article>
+          <h2>Classic Bar Favorites</h2>
+          <p>Burgers, sandwiches, fish & chips, and comfort meals made fresh every day.</p>
+        </article>
+        <article>
+          <h2>Weekly Events</h2>
+          <p>Trivia nights, live music, and community gatherings with local guests.</p>
+        </article>
+        <article>
+          <h2>Private Parties</h2>
+          <p>Reserve our space for birthdays, business gatherings, or casual celebrations.</p>
+        </article>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Vic's Bar & Grill — All rights reserved.</p>
-        <p>Address: 7900 Example St, City, State • Phone: (555) 123-4567</p>
+      <div class="container footer-inner">
+        <div>
+          <p>© <span id="year"></span> Vic's Bar & Grill</p>
+          <p>7900 Example St, City • (555) 123-4567</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="menu.html">Menu</a>
+        </div>
       </div>
     </footer>
 
