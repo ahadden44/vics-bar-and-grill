@@ -10,15 +10,21 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="top-bar">
-        <div class="container top-bar-inner">
-          <div class="top-brand-wrap">
-            <img class="top-brand-logo" src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
-            <span class="top-brand">Vic's Bar & Grill</span>
-          </div>
-        </div>
+      <div class="desktop-header container">
+        <nav class="header-links header-links-left" aria-label="Primary left navigation">
+          <a href="index.html">Home</a>
+          <a class="active" href="about.html">About</a>
+        </nav>
+        <a class="brand brand-desktop" href="index.html" aria-label="Vic's Bar & Grill home">
+          <img class="brand-logo" src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
+        </a>
+        <nav class="header-links header-links-right" aria-label="Primary right navigation">
+          <a href="menu.html">Menu</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-      <div class="container nav-wrap">
+      <div class="mobile-header container">
         <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -26,17 +32,17 @@
           <img class="logo" src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
           <span>Vic's Bar & Grill</span>
         </a>
-        <nav class="nav-panel" id="primary-nav">
-          <ul class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="about.html">About</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="nav-backdrop" type="button" aria-label="Close navigation"></button>
       </div>
+      <nav class="nav-panel" id="primary-nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-backdrop" type="button" aria-label="Close navigation"></button>
     </header>
 
     <main>
