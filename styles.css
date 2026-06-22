@@ -210,6 +210,44 @@ button, .btn { cursor:pointer; font-family:inherit; }
 .week-card p { margin:0; color:var(--text-muted); }
 .week-cta-wrap { margin-top:22px; display:flex; justify-content:center; }
 
+.calendar-section { padding: 40px 0 100px; }
+.calendar-card {
+  display:grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(360px, 1.35fr);
+  gap:24px;
+  align-items:stretch;
+  background:linear-gradient(180deg, #f7f1e4, #efe4d0);
+  border:1px solid rgba(46,98,143,.22);
+  border-radius:28px;
+  padding:24px;
+  box-shadow:0 18px 36px rgba(27,48,79,.14);
+}
+.calendar-copy {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:16px;
+}
+.calendar-copy h2 {
+  margin:0;
+  font-size:2.6rem;
+  color:var(--primary);
+}
+.calendar-copy p {
+  margin:0;
+  color:var(--text-muted);
+  line-height:1.85;
+  font-size:1.02rem;
+}
+.calendar-embed iframe {
+  width:100%;
+  min-height:680px;
+  border:0;
+  border-radius:20px;
+  box-shadow:0 14px 30px rgba(27,48,79,.12);
+  background:#fff;
+}
+
 .community-panel {
   background:linear-gradient(180deg, #f7f1e4, #efe5d4);
   border:1px solid rgba(46,98,143,.22);
@@ -324,6 +362,10 @@ body.neon-mode .event-card {
   .week-banner img { height:220px; }
   .feature-image { height:88px; }
   .community-panel { padding:24px; }
+  .calendar-section { padding: 24px 0 64px; }
+  .calendar-card { grid-template-columns:1fr; padding:18px; }
+  .calendar-copy h2 { font-size:2rem; }
+  .calendar-embed iframe { min-height:620px; }
   .features article,
   .menu-item.brief,
   .event-card,
