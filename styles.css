@@ -212,8 +212,9 @@ body.nav-open .nav-panel { transform:translateX(0); display:block; }
 .menu-tab.active { background:var(--accent); border-color:var(--gold); color:#fff; box-shadow:0 18px 44px rgba(180,120,30,.55), 0 0 22px rgba(212,168,58,.28); }
 .menu-section.hidden { display:none !important; }
 
-.section-card { background:#1a1a1a; border:1px solid rgba(255,200,120,.12); border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,.4), 0 18px 38px rgba(0,0,0,.28); }
-.features-section { margin:74px auto 0; padding-top:28px; padding-bottom:34px; }
+.section-card { background:#1a1a1a; border:1px solid rgba(212,168,58,.30); border-top:none; border-radius:0 0 16px 16px; box-shadow:0 0 10px rgba(0,0,0,.4), 0 18px 38px rgba(0,0,0,.28), 0 0 0 1px rgba(212,168,58,.08); }
+.features-section { margin:74px auto 0; padding-top:34px; padding-bottom:40px; border-top:3px solid var(--gold); border-radius:0 0 16px 16px; }
+.section-card-dark { background:#0e0d0c; border:1px solid rgba(212,168,58,.30); border-top:3px solid var(--gold); border-radius:16px; box-shadow:0 0 0 1px rgba(0,0,0,.5), 0 24px 48px rgba(0,0,0,.50); }
 .features { display:grid; grid-template-columns:repeat(3,minmax(220px,1fr)); gap:36px; padding:0; }
 .features article { background:var(--surface-raised); border:1px solid var(--border); border-radius:12px; padding:28px 26px 30px; color:var(--text); box-shadow:0 0 10px rgba(0,0,0,.4), 0 16px 28px rgba(0,0,0,.24); }
 .feature-image { width:100%; height:220px; object-fit:cover; border-radius:18px; margin-bottom:20px; border:1px solid rgba(180,130,50,.20); box-shadow:0 12px 24px rgba(0,0,0,.28); }
@@ -392,7 +393,11 @@ body.nav-open .nav-panel { transform:translateX(0); display:block; }
 .form-group input::placeholder, .form-group textarea::placeholder { color:#7a6a58; }
 .form-group input:focus, .form-group textarea:focus { outline:none; border-color:var(--accent); background:var(--surface-raised); }
 
-.week-section { padding:28px 0 40px; margin:74px auto 92px; }
+
+/* Home page photo banner */
+.home-photo-section { margin:60px 0; position:relative; overflow:hidden; border-top:3px solid var(--gold); border-bottom:3px solid var(--gold); box-shadow:0 0 40px rgba(0,0,0,.6); }
+.home-photo-section img { width:100%; height:420px; object-fit:cover; display:block; }
+.week-section { padding:34px 0 44px; margin:60px auto 80px; }
 .week-banner { margin:0 0 24px; border-radius:20px; overflow:hidden; border:1px solid rgba(180,130,50,.22); box-shadow:0 18px 36px rgba(0,0,0,.35); }
 .week-banner img { width:100%; height:380px; object-fit:cover; }
 .week-section h2 { margin:26px 0 16px; font-size:3rem; color:var(--gold); text-align:center; line-height:1; }
@@ -505,8 +510,10 @@ body.neon-mode .event-card {
   .hero h1 { font-size:2.55rem; }
   .tagline { font-size:1.05rem; }
   .hero p { font-size:1rem; line-height:1.65; }
-  .features-section { margin-top:56px; padding-top:22px; padding-bottom:24px; }
-  .week-section { padding:20px 0 28px; margin:56px auto 46px; }
+  .features-section { margin-top:48px; padding-top:22px; padding-bottom:24px; }
+  .week-section { padding:22px 0 30px; margin:40px auto 36px; }
+  .home-photo-section { margin:40px 0; }
+  .home-photo-section img { height:260px; }
   .week-banner img { height:260px; }
   .feature-image { height:160px; }
   .community-panel { padding:24px; }
