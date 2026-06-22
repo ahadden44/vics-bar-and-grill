@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vic's Bar & Grill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <a class="btn btn-primary" href="menu.html">Order Online</a>
+          <span class="top-text">Pull tabs, TouchTunes, rotating specials, and live game-day fun.</span>
+          <a class="top-link" href="tel:5551234567">(555) 123-4567</a>
+        </div>
+      </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="logo" src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
+          <span>Vic's Bar & Grill</span>
+        </a>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="eyebrow">Neighborhood Bar & Grill</span>
+          <h1>Vic's Bar & Grill — burgers, beer, and local fun.</h1>
+          <p>Enjoy great food, live events, TouchTunes, pull tabs, and a warm community atmosphere every night.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="menu.html">View Menu</a>
+            <a class="btn btn-secondary" href="events.html">See Events</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="image-showcase">
+        <div class="container image-grid">
+          <article class="image-card">
+            <img src="images/outdoor.jpg" alt="Outdoor seating at Vic's Bar & Grill" />
+            <div class="card-content">
+              <h2>Outdoor Seating</h2>
+              <p>Enjoy the fresh air and friendly atmosphere on our patio.</p>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="images/outdoor2.jpg" alt="Outdoor gathering space at Vic's Bar & Grill" />
+            <div class="card-content">
+              <h2>Local Events</h2>
+              <p>Perfect for game nights, trivia, and weekend specials with friends.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="features container">
+        <article>
+          <h2>About Vic's</h2>
+          <p>We’re a neighborhood bar serving handcrafted burgers, hearty plates, and a welcoming place to unwind.</p>
+          <a class="feature-link" href="about.html">Learn More</a>
+        </article>
+        <article>
+          <h2>What we offer</h2>
+          <p>Pull tabs, TouchTunes, rotating drink specials, and a menu built for game nights and group outings.</p>
+          <a class="feature-link" href="menu.html">See Menu</a>
+        </article>
+        <article>
+          <h2>Events & specials</h2>
+          <p>Join us for trivia, live music, happy hour deals, and weekend bar food specials.</p>
+          <a class="feature-link" href="events.html">View Events</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p>© <span id="year"></span> Vic's Bar & Grill</p>
+          <p>7900 Example St, City • (555) 123-4567</p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="menu.html">Menu</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
