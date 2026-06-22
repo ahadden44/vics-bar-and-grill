@@ -6,7 +6,7 @@
     <meta name="description" content="Vic's Bar & Grill in St. Louis Park serves fresh burgers, drinks, live events, and neighborhood bar atmosphere." />
     <meta name="keywords" content="Vic's Bar & Grill, St. Louis Park bar, burgers, drinks, events, happy hour" />
     <title>Vic's Bar & Grill</title>
-    <link rel="stylesheet" href="styles.css?v=20260619" />
+    <link rel="stylesheet" href="styles.css?v=20260622" />
   </head>
   <body>
     <header class="site-header">
@@ -53,10 +53,18 @@
     <main>
       <section class="hero hero-home">
         <div class="hero-slide" style="--slide-bg:url('images/outdoor.jpg')"></div>
-        <div class="hero-slide" style="--slide-bg:url('images/vicsoutsidebanner.jpg'); animation-delay:-18s"></div>
-        <div class="hero-slide" style="--slide-bg:url('images/inside.jpg'); animation-delay:-12s"></div>
-        <div class="hero-slide" style="--slide-bg:url('images/outdoor2.jpg'); animation-delay:-6s"></div>
+        <div class="hero-slide" style="--slide-bg:url('images/vicsoutsidebanner.jpg')"></div>
+        <div class="hero-slide" style="--slide-bg:url('images/inside.jpg')"></div>
+        <div class="hero-slide" style="--slide-bg:url('images/outdoor2.jpg')"></div>
         <div class="hero-overlay"></div>
+        <button class="hero-arrow hero-arrow-prev" aria-label="Previous photo">&#8249;</button>
+        <button class="hero-arrow hero-arrow-next" aria-label="Next photo">&#8250;</button>
+        <div class="hero-dots" aria-hidden="true">
+          <button class="hero-dot" aria-label="Slide 1"></button>
+          <button class="hero-dot" aria-label="Slide 2"></button>
+          <button class="hero-dot" aria-label="Slide 3"></button>
+          <button class="hero-dot" aria-label="Slide 4"></button>
+        </div>
         <div class="container hero-content">
           <span class="eyebrow">Neighborhood Corner Bar</span>
           <h1>Award-winning burgers, cold beer, and live music.</h1>
@@ -145,6 +153,48 @@
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Hero slideshow
+      (function () {
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots   = document.querySelectorAll('.hero-dot');
+        let current = 0;
+        let timer;
+
+        function goTo(n) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = (n + slides.length) % slides.length;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+        }
+
+        function startAuto() {
+          timer = setInterval(function () { goTo(current + 1); }, 6000);
+        }
+
+        function restartAuto() {
+          clearInterval(timer);
+          startAuto();
+        }
+
+        document.querySelector('.hero-arrow-prev').addEventListener('click', function () {
+          goTo(current - 1);
+          restartAuto();
+        });
+
+        document.querySelector('.hero-arrow-next').addEventListener('click', function () {
+          goTo(current + 1);
+          restartAuto();
+        });
+
+        dots.forEach(function (dot, i) {
+          dot.addEventListener('click', function () { goTo(i); restartAuto(); });
+        });
+
+        goTo(0);
+        startAuto();
+      }());
 
       const menuToggle = document.querySelector('.menu-toggle');
       const navBackdrop = document.querySelector('.nav-backdrop');

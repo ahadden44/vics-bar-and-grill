@@ -6,7 +6,7 @@
     <meta name="description" content="Browse Vic's Bar & Grill menu in St. Louis Park including breakfast, burgers, appetizers, and dinner favorites." />
     <meta name="keywords" content="Vic's menu, St. Louis Park menu, burgers, appetizers, breakfast" />
     <title>Menu — Vic's Bar & Grill</title>
-    <link rel="stylesheet" href="styles.css?v=20260619" />
+    <link rel="stylesheet" href="styles.css?v=20260622" />
   </head>
   <body class="menu-page">
     <header class="site-header">
@@ -63,10 +63,24 @@
         <button class="menu-tab" type="button" data-target="lunchdinner">Lunch & Dinner</button>
       </section>
 
+      <section class="container menu-photo-row">
+        <div class="menu-photo-item">
+          <img src="images/burger2.jpg" alt="Vic's signature burger" />
+        </div>
+        <div class="menu-photo-item">
+          <img src="images/nachos.webp" alt="Loaded nachos appetizer" />
+        </div>
+        <div class="menu-photo-item">
+          <img src="images/drinks.webp" alt="Cold drinks at Vic's" />
+        </div>
+      </section>
+
       <section class="container menu-section hidden" id="breakfast">
         <h2>Breakfast</h2>
         <p class="menu-note">Served Saturday and Sunday from 9:00 AM to Noon.</p>
-        <div class="menu-items">
+        <div class="menu-category">
+          <h3 class="menu-subhead">🍳 Classic Plates</h3>
+          <div class="menu-items">
           <div class="menu-item brief">
             <div class="item-header">
               <h3>Classic Breakfast Plate</h3>
@@ -110,6 +124,7 @@
             <p>Two pancakes, two eggs, and your choice of bacon or sausage.</p>
           </div>
         </div>
+        </div>
       </section>
 
       <section class="container menu-section hidden" id="lunchdinner">
@@ -124,8 +139,9 @@
           <a href="#ld-extras">Extras</a>
         </nav>
 
-        <h3 class="menu-subhead" id="ld-appetizers">Appetizers</h3>
-        <p class="menu-note">Sauces: Ranch, Spicy Buffalo, BBQ, Honey Mustard, Seasoned Sour Cream, Blue Cheese, Sweet & Sour, Sweet Chili.</p>
+        <div class="menu-category">
+        <h3 class="menu-subhead" id="ld-appetizers">🍟 Appetizers</h3>
+        <p class="menu-note">Sauces: Ranch, Spicy Buffalo, BBQ, Honey Mustard, Seasoned Sour Cream, Blue Cheese, Sweet &amp; Sour, Sweet Chili.</p>
         <div class="menu-items">
           <div class="menu-item brief">
             <div class="item-header">
@@ -212,8 +228,10 @@
             <p>Eight pieces served with marinara sauce.</p>
           </div>
         </div>
+        </div>
 
-        <h3 class="menu-subhead" id="ld-burgers">Burgers</h3>
+        <div class="menu-category">
+        <h3 class="menu-subhead" id="ld-burgers">🍔 Burgers</h3>
         <p class="menu-note">Fresh, hand pattied burger served on a toasted, buttery bun with tangy dill pickles and potato chips or french fries. Substitute turkey patty $1. Substitute veggie impossible $3. Additional hamburger patty $4.</p>
         <div class="menu-items">
           <div class="menu-item brief">
@@ -287,8 +305,10 @@
             <p>Fried onions and melted Swiss served on rye toast.</p>
           </div>
         </div>
+        </div>
 
-        <h3 class="menu-subhead" id="ld-salads">Fresh Salads</h3>
+        <div class="menu-category">
+        <h3 class="menu-subhead" id="ld-salads">🥗 Fresh Salads</h3>
         <p class="menu-note">Dressings: Balsamic Vinaigrette, Blue Cheese, Caesar, French, Italian Light, Ranch, and Thousand Island.</p>
         <div class="menu-items">
           <div class="menu-item brief">
@@ -327,8 +347,10 @@
             <p>Smoked bacon, tomatoes, and blue cheese crumbles served with grilled diced chicken breast.</p>
           </div>
         </div>
+        </div>
 
-        <h3 class="menu-subhead" id="ld-baskets">Baskets</h3>
+        <div class="menu-category">
+        <h3 class="menu-subhead" id="ld-baskets">🧺 Baskets</h3>
         <div class="menu-items">
           <div class="menu-item brief">
             <div class="item-header">
@@ -408,8 +430,10 @@
             <p>Crispy tater tots.</p>
           </div>
         </div>
+        </div>
 
-        <h3 class="menu-subhead" id="ld-sandwiches">Sandwiches</h3>
+        <div class="menu-category">
+        <h3 class="menu-subhead" id="ld-sandwiches">🥪 Sandwiches</h3>
         <p class="menu-note">Served with tangy dill pickles and crispy potato chips or french fries.</p>
         <div class="menu-items">
           <div class="menu-item brief">
@@ -483,8 +507,10 @@
             <p>100% all-beef grilled hot dog served on a toasted bun.</p>
           </div>
         </div>
+        </div>
 
-        <h3 class="menu-subhead" id="ld-pizzas">Pizzas 12 inch</h3>
+        <div class="menu-category">
+        <h3 class="menu-subhead" id="ld-pizzas">🍕 Pizzas 12 inch</h3>
         <div class="menu-items">
           <div class="menu-item brief"><div class="item-header"><h3>Cheese</h3><span class="price">$10</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Pepperoni</h3><span class="price">$11</span></div></div>
@@ -493,14 +519,17 @@
           <div class="menu-item brief"><div class="item-header"><h3>Inferno</h3><span class="price">$13</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Deluxe</h3><span class="price">$13</span></div></div>
         </div>
+        </div>
 
-        <h3 class="menu-subhead" id="ld-extras">Extras</h3>
+        <div class="menu-category">
+        <h3 class="menu-subhead" id="ld-extras">✨ Extras</h3>
         <div class="menu-items">
           <div class="menu-item brief"><div class="item-header"><h3>Additional sauces or sauerkraut</h3><span class="price">$0.50</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Cheese</h3><span class="price">$1</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Bacon</h3><span class="price">$2</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Side Salad</h3><span class="price">$3</span></div></div>
           <div class="menu-item brief"><div class="item-header"><h3>Cole Slaw</h3><span class="price">$3</span></div></div>
+        </div>
         </div>
         <p class="menu-note">We cook our hamburgers to just done with an internal temperature of 160 degrees. We will cook at your request to medium rare, which will not ensure safe internal temperatures. Prices do not include tax or gratuity. No checks.</p>
       </section>
