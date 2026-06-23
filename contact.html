@@ -6,7 +6,7 @@
     <meta name="description" content="Contact Vic's Bar & Grill in St. Louis Park for reservations, events, and general inquiries." />
     <meta name="keywords" content="Vic's contact, St. Louis Park bar phone, reservations, private events" />
     <title>Contact — Vic's Bar & Grill</title>
-    <link rel="stylesheet" href="styles.css?v=20260623c" />
+    <link rel="stylesheet" href="styles.css?v=20260623d" />
   </head>
   <body>
     <header class="site-header">
@@ -159,6 +159,7 @@
 
       const menuToggle = document.querySelector('.menu-toggle');
       const navBackdrop = document.querySelector('.nav-backdrop');
+      const navPanel = document.querySelector('.nav-panel');
       const navLinks = document.querySelectorAll('.nav a');
 
       function closeMobileNav() {
@@ -182,6 +183,18 @@
 
       navLinks.forEach(link => {
         link.addEventListener('click', closeMobileNav);
+      });
+
+      document.addEventListener('click', e => {
+        if (!document.body.classList.contains('nav-open')) {
+          return;
+        }
+
+        if ((menuToggle && menuToggle.contains(e.target)) || (navPanel && navPanel.contains(e.target))) {
+          return;
+        }
+
+        closeMobileNav();
       });
 
       document.addEventListener('keydown', e => {

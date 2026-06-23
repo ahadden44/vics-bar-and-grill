@@ -6,7 +6,7 @@
     <meta name="description" content="See upcoming trivia, karaoke, pull tabs, TouchTunes, and game day specials at Vic's Bar & Grill in St. Louis Park." />
     <meta name="keywords" content="St. Louis Park events, pull tabs, TouchTunes, trivia night, karaoke, Vic's" />
     <title>Events — Vic's Bar & Grill</title>
-    <link rel="stylesheet" href="styles.css?v=20260623c" />
+    <link rel="stylesheet" href="styles.css?v=20260623d" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -98,7 +98,12 @@
           <h2>Weekly Events</h2>
           <p>Scroll through the weekly lineup. Each card leaves room for event photos, flyers, and promotional graphics.</p>
         </div>
-        <div class="events-scroll" aria-label="Weekly events">
+        <div class="events-scroll-wrap">
+          <button class="events-scroll-next" type="button" aria-label="Scroll weekly events to the right">
+            <span class="events-scroll-next-label">More events</span>
+            <span class="events-scroll-next-icon" aria-hidden="true">➜</span>
+          </button>
+          <div class="events-scroll" aria-label="Weekly events">
           <article class="event-card event-card-large">
             <img class="event-card-image" src="images/outdoor2.jpg" alt="Guests gathering outside Vic's Bar & Grill" />
             <div class="event-card-body">
@@ -142,6 +147,7 @@
               <p style="margin-top:12px;"><strong>Great food & good company.</strong></p>
             </div>
           </article>
+        </div>
         </div>
         <div class="event-photo-grid">
           <article class="event-photo-card">
@@ -203,7 +209,10 @@
 
       const menuToggle = document.querySelector('.menu-toggle');
       const navBackdrop = document.querySelector('.nav-backdrop');
+      const navPanel = document.querySelector('.nav-panel');
       const navLinks = document.querySelectorAll('.nav a');
+      const eventsScroll = document.querySelector('.events-scroll');
+      const eventsScrollNext = document.querySelector('.events-scroll-next');
 
       function closeMobileNav() {
         document.body.classList.remove('nav-open');
@@ -228,9 +237,44 @@
         link.addEventListener('click', closeMobileNav);
       });
 
+      document.addEventListener('click', e => {
+        if (!document.body.classList.contains('nav-open')) {
+          return;
+        }
+
+        if ((menuToggle && menuToggle.contains(e.target)) || (navPanel && navPanel.contains(e.target))) {
+          return;
+        }
+
+        closeMobileNav();
+      });
+
       document.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
           closeMobileNav();
         }
       });
+
+      function updateEventsScrollNext() {
+        if (!eventsScroll || !eventsScrollNext) {
+          return;
+        }
+
+        const remainingScroll = eventsScroll.scrollWidth - eventsScroll.clientWidth - eventsScroll.scrollLeft;
+        const showArrow = window.innerWidth <= 980 && remainingScroll > 16;
+        eventsScrollNext.hidden = !showArrow;
+      }
+
+      if (eventsScroll && eventsScrollNext) {
+        eventsScrollNext.addEventListener('click', () => {
+          eventsScroll.scrollBy({
+            left: Math.max(eventsScroll.clientWidth * 0.82, 260),
+            behavior: 'smooth'
+          });
+        });
+
+        eventsScroll.addEventListener('scroll', updateEventsScrollNext, { passive: true });
+        window.addEventListener('resize', updateEventsScrollNext);
+        updateEventsScrollNext();
+      }
     </script>
