@@ -6,7 +6,7 @@
     <meta name="description" content="Learn about Vic's Bar & Grill in St. Louis Park, our story, atmosphere, and fresh daily burgers." />
     <meta name="keywords" content="about Vic's Bar & Grill, St. Louis Park restaurant, local bar story" />
     <title>About — Vic's Bar & Grill</title>
-    <link rel="stylesheet" href="styles.css?v=20260619" />
+    <link rel="stylesheet" href="styles.css?v=20260623f" />
   </head>
   <body>
     <header class="site-header">
@@ -51,7 +51,7 @@
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero page-hero-photo" style="--photo-bg:url('images/vicsoutsidebanner.jpg')">
         <div class="container">
           <h1>Welcome to Vic's</h1>
           <p>Your neighborhood bar for cold drinks, fresh food, and nights that feel like home.</p>
@@ -66,14 +66,14 @@
             <p>From fresh-ground burgers to cold beer and live events, the goal has always been simple: make a spot people want to return to again and again.</p>
           </div>
           <div>
-            <img src="images/inside.jpg" alt="Inside Vic's Bar &amp; Grill" style="width:100%;border-radius:18px;object-fit:cover;height:280px;border:1px solid rgba(255,255,255,.1);" />
+            <img src="images/outdoor.jpg" alt="Outside Vic's Bar &amp; Grill" style="width:100%;border-radius:18px;object-fit:cover;height:280px;border:1px solid rgba(255,255,255,.1);" />
           </div>
           <div>
             <h2>Our Mission</h2>
             <ul class="values-list">
               <li><strong>Quality Food</strong> — Fresh ingredients, house-ground burgers, and a menu built for real appetite.</li>
               <li><strong>Cold Beer & Drink Specials</strong> — Full bar service, happy hour 10-6, and the kind of drinks that keep the night moving.</li>
-              <li><strong>Live Music & Fun</strong> — Trivia, music, TouchTunes, and a room that stays lively without losing its neighborhood feel.</li>
+              <li><strong>Neighborhood Fun</strong> — Trivia, karaoke, TouchTunes, and pull tabs in a room that stays lively without losing its neighborhood feel.</li>
             </ul>
           </div>
         </div>
@@ -93,7 +93,8 @@
           <img src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
           <div>
             <p>© <span id="year"></span> Vic's Bar & Grill</p>
-            <p>7900 Example St, St. Louis Park, MN</p>
+            <p>5901 Cedar Lake Rd S, St. Louis Park, MN 55416</p>
+            <p><a class="footer-link" href="tel:9525454567" style="display:inline;margin:0;padding:0;">(952) 545-4567</a></p>
           </div>
         </div>
         <div>
@@ -119,6 +120,7 @@
 
       const menuToggle = document.querySelector('.menu-toggle');
       const navBackdrop = document.querySelector('.nav-backdrop');
+      const navPanel = document.querySelector('.nav-panel');
       const navLinks = document.querySelectorAll('.nav a');
 
       function closeMobileNav() {
@@ -142,6 +144,18 @@
 
       navLinks.forEach(link => {
         link.addEventListener('click', closeMobileNav);
+      });
+
+      document.addEventListener('click', e => {
+        if (!document.body.classList.contains('nav-open')) {
+          return;
+        }
+
+        if ((menuToggle && menuToggle.contains(e.target)) || (navPanel && navPanel.contains(e.target))) {
+          return;
+        }
+
+        closeMobileNav();
       });
 
       document.addEventListener('keydown', e => {

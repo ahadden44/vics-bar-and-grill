@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="See upcoming live music, trivia, karaoke, and game day specials at Vic's Bar & Grill in St. Louis Park." />
-    <meta name="keywords" content="St. Louis Park events, bar live music, trivia night, karaoke, Vic's" />
+    <meta name="description" content="See upcoming trivia, karaoke, pull tabs, TouchTunes, and game day specials at Vic's Bar & Grill in St. Louis Park." />
+    <meta name="keywords" content="St. Louis Park events, pull tabs, TouchTunes, trivia night, karaoke, Vic's" />
     <title>Events — Vic's Bar & Grill</title>
-    <link rel="stylesheet" href="styles.css?v=20260619" />
+    <link rel="stylesheet" href="styles.css?v=20260623f" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -14,14 +14,14 @@
         "name": "Vic's Bar & Grill",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "7900 Example St",
+          "streetAddress": "5901 Cedar Lake Rd S",
           "addressLocality": "St. Louis Park",
           "addressRegion": "MN"
         },
         "event": [
           {
             "@type": "Event",
-            "name": "Friday Live Music",
+            "name": "Pull Tabs & TouchTunes",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "location": {
@@ -86,10 +86,10 @@
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero page-hero-photo" style="--photo-bg:url('images/vicsoutsidebanner.jpg')">
         <div class="container">
           <h1>Events & Entertainment</h1>
-          <p>Every week brings something new. Join us for live music, trivia, and community.</p>
+          <p>Every week brings something new. Join us for trivia, karaoke, pull tabs, and TouchTunes.</p>
         </div>
       </section>
 
@@ -98,20 +98,25 @@
           <h2>Weekly Events</h2>
           <p>Scroll through the weekly lineup. Each card leaves room for event photos, flyers, and promotional graphics.</p>
         </div>
-        <div class="events-scroll" aria-label="Weekly events">
+        <div class="events-scroll-wrap">
+          <button class="events-scroll-next" type="button" aria-label="Scroll weekly events to the right">
+            <span class="events-scroll-next-label">More events</span>
+            <span class="events-scroll-next-icon" aria-hidden="true">➜</span>
+          </button>
+          <div class="events-scroll" aria-label="Weekly events">
           <article class="event-card event-card-large">
             <img class="event-card-image" src="images/outdoor2.jpg" alt="Guests gathering outside Vic's Bar & Grill" />
             <div class="event-card-body">
-              <div class="event-day">Fridays</div>
-              <h2>Live Music Night</h2>
-              <p class="event-time">8:00 PM — Close</p>
-              <p>Local bands, cold drinks, and a full room every week.</p>
-              <p style="margin-top:12px;"><strong>No cover charge.</strong></p>
+              <div class="event-day">Every Day</div>
+              <h2>Pull Tabs &amp; TouchTunes</h2>
+              <p class="event-time">Open — Close</p>
+              <p>Kick back with bar games, jukebox favorites, and an easy neighborhood crowd.</p>
+              <p style="margin-top:12px;"><strong>Stop in anytime.</strong></p>
             </div>
           </article>
 
           <article class="event-card event-card-large">
-            <img class="event-card-image" src="images/menu1.jpg" alt="Food and drinks at Vic's Bar & Grill" />
+            <img class="event-card-image" src="https://github.com/user-attachments/assets/d6728323-a31d-46f3-ad4c-f191d20faeff" alt="Trivia challenge card and drinks at Vic's Bar & Grill" />
             <div class="event-card-body">
               <div class="event-day">Tuesdays</div>
               <h2>Trivia Night</h2>
@@ -122,7 +127,7 @@
           </article>
 
           <article class="event-card event-card-large">
-            <img class="event-card-image" src="images/menu2.jpg" alt="Vic's menu items and bar atmosphere" />
+            <img class="event-card-image" src="https://github.com/user-attachments/assets/7832503a-f010-4182-91e1-6d15d8d9f71f" alt="Karaoke night at Vic's Bar & Grill" />
             <div class="event-card-body">
               <div class="event-day">Saturdays</div>
               <h2>Karaoke Night</h2>
@@ -143,9 +148,10 @@
             </div>
           </article>
         </div>
+        </div>
         <div class="event-photo-grid">
           <article class="event-photo-card">
-            <img src="images/hero.svg" alt="Vic's hero artwork" />
+            <img src="https://github.com/user-attachments/assets/401d3b04-fc08-496d-96dd-a35a45be61ab" alt="Private party setup at Vic's Bar & Grill" />
             <div>
               <h3>Private Parties</h3>
               <p>Reserve space for birthdays, reunions, and team events.</p>
@@ -176,7 +182,8 @@
           <img src="images/logo.jpg" alt="Vic's Bar & Grill logo" />
           <div>
             <p>© <span id="year"></span> Vic's Bar & Grill</p>
-            <p>7900 Example St, St. Louis Park, MN</p>
+            <p>5901 Cedar Lake Rd S, St. Louis Park, MN 55416</p>
+            <p><a class="footer-link" href="tel:9525454567" style="display:inline;margin:0;padding:0;">(952) 545-4567</a></p>
           </div>
         </div>
         <div>
@@ -202,7 +209,10 @@
 
       const menuToggle = document.querySelector('.menu-toggle');
       const navBackdrop = document.querySelector('.nav-backdrop');
+      const navPanel = document.querySelector('.nav-panel');
       const navLinks = document.querySelectorAll('.nav a');
+      const eventsScroll = document.querySelector('.events-scroll');
+      const eventsScrollNext = document.querySelector('.events-scroll-next');
 
       function closeMobileNav() {
         document.body.classList.remove('nav-open');
@@ -227,9 +237,44 @@
         link.addEventListener('click', closeMobileNav);
       });
 
+      document.addEventListener('click', e => {
+        if (!document.body.classList.contains('nav-open')) {
+          return;
+        }
+
+        if ((menuToggle && menuToggle.contains(e.target)) || (navPanel && navPanel.contains(e.target))) {
+          return;
+        }
+
+        closeMobileNav();
+      });
+
       document.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
           closeMobileNav();
         }
       });
+
+      function updateEventsScrollNext() {
+        if (!eventsScroll || !eventsScrollNext) {
+          return;
+        }
+
+        const remainingScroll = eventsScroll.scrollWidth - eventsScroll.clientWidth - eventsScroll.scrollLeft;
+        const showArrow = window.innerWidth <= 980 && remainingScroll > 16;
+        eventsScrollNext.hidden = !showArrow;
+      }
+
+      if (eventsScroll && eventsScrollNext) {
+        eventsScrollNext.addEventListener('click', () => {
+          eventsScroll.scrollBy({
+            left: Math.max(eventsScroll.clientWidth * 0.82, 260),
+            behavior: 'smooth'
+          });
+        });
+
+        eventsScroll.addEventListener('scroll', updateEventsScrollNext, { passive: true });
+        window.addEventListener('resize', updateEventsScrollNext);
+        updateEventsScrollNext();
+      }
     </script>
