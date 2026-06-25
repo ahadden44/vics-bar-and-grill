@@ -86,7 +86,7 @@ button, .btn { cursor:pointer; font-family:inherit; }
 
 /* ---- Main header ---- */
 .site-header { background:linear-gradient(90deg, rgba(45,41,38,.98), rgba(53,48,44,.96) 44%, rgba(63,32,35,.96)); color:var(--text-bright); position:sticky; top:0; z-index:120; box-shadow:0 18px 42px rgba(0,0,0,.28); border-bottom:1px solid rgba(255,242,216,.12); backdrop-filter:blur(14px); }
-.site-header::after { content:''; position:absolute; inset:1px 0 0; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 44%); pointer-events:none; }
+.site-header::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 44%); pointer-events:none; }
 .desktop-header { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:32px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); padding:16px 24px 14px; min-height:108px; }
 .header-links { display:flex; align-items:center; gap:28px; padding:12px 18px; border:1px solid rgba(255,242,216,.14); border-radius:999px; background:linear-gradient(135deg, rgba(255,255,255,.04), rgba(197,32,38,.08)); box-shadow:inset 0 1px 0 rgba(255,255,255,.04), 0 10px 24px rgba(0,0,0,.18); }
 .header-links-left { justify-self:end; }
