@@ -109,6 +109,11 @@ body.nav-open .nav-panel { transform:translateX(0); display:block; }
 .menu-toggle span { display:block; width:18px; height:2px; border-radius:2px; background:#fff; }
 .nav-backdrop { display:none; }
 
+/* Mobile nav drawer brand header */
+.nav-panel-brand { display:flex; align-items:center; gap:12px; padding:0 14px 20px; border-bottom:1px solid rgba(255,255,255,.12); margin-bottom:14px; }
+.nav-panel-brand img { width:44px; height:44px; border-radius:50%; object-fit:cover; border:1px solid rgba(255,215,150,.32); flex-shrink:0; }
+.nav-panel-brand span { font-family:var(--headline-font); font-size:1.15rem; letter-spacing:.1em; text-transform:uppercase; color:#f4ead8; line-height:1.1; }
+
 .hero { position:relative; min-height:560px; display:flex; align-items:center; }
 /* --- Rotating hero slideshow --- */
 @keyframes heroZoom {
@@ -766,7 +771,7 @@ body.neon-mode .event-card {
   .mobile-header .brand { gap:10px; }
   .mobile-header .brand span { font-size:1.08rem; line-height:1.08; letter-spacing:.05em; }
   .nav a { font-size:.9rem; }
-  .hero { min-height:auto; }
+  .hero { min-height:clamp(440px, 70vh, 640px); }
   .hero-content { max-width:100%; padding:42px 22px 86px; }
   .hero .eyebrow { margin-bottom:14px; font-size:.74rem; letter-spacing:.18em; }
   .hero h1 { font-size:2.15rem; line-height:1.02; margin-bottom:14px; }
@@ -775,6 +780,7 @@ body.neon-mode .event-card {
   .hero-lede { font-size:1rem; }
   .hero-actions { gap:12px; }
   .page-hero { padding:44px 0; }
+  .page-hero-photo { min-height:240px; }
   .page-hero p { font-size:1rem; line-height:1.65; }
   .content-section { padding:52px 0; }
   .content-grid { gap:28px; }
@@ -854,6 +860,7 @@ body.neon-mode .event-card {
   .menu-photo-row { grid-template-columns:1fr; gap:14px; }
   .form-row { grid-template-columns:1fr; }
   .footer-inner { grid-template-columns:1fr; }
+  .footer-inner > div + div { padding-top:20px; border-top:1px solid rgba(255,255,255,.1); }
   .contact-grid { gap:20px; padding:40px 0; }
   .hours-map-section { gap:18px; padding-bottom:28px; }
   .contact-form-section { padding:44px 0; }
@@ -891,7 +898,10 @@ body.neon-mode .event-card {
     --menu-scroll-offset: 176px;
   }
   .container { padding:0 14px; }
-  .mobile-header .brand span { font-size:.98rem; }
+  .announce-bar { flex-direction:column; align-items:center; gap:8px; padding:10px 14px 12px; }
+  .announce-bar span { width:auto; text-align:center; }
+  .announce-bar a.announce-btn { width:auto; }
+  .mobile-header .brand span { font-size:1.05rem; }
   .hero-content { padding:34px 18px 84px; }
   .hero h1 { font-size:1.82rem; }
   .btn { width:100%; justify-content:center; padding:15px 22px; font-size:.84rem; }
