@@ -761,24 +761,35 @@ body.neon-mode .event-card {
   .announce-bar { padding:10px 14px 12px; }
   .announce-bar span { width:100%; }
   .announce-bar a.announce-btn { width:100%; max-width:280px; }
-  .mobile-header .brand span { font-size:1.18rem; }
+  .mobile-header { gap:12px; padding:16px 0; }
+  .mobile-header .logo { width:52px; height:52px; padding:7px; }
+  .mobile-header .brand { gap:10px; }
+  .mobile-header .brand span { font-size:1.08rem; line-height:1.08; letter-spacing:.05em; }
   .nav a { font-size:.9rem; }
   .hero { min-height:auto; }
-  .hero-content { max-width:100%; padding:56px 52px; }
-  .hero h1 { font-size:2.55rem; }
+  .hero-content { max-width:100%; padding:48px 24px; }
+  .hero h1 { font-size:2.3rem; }
   .tagline { font-size:1.05rem; }
   .hero p { font-size:1rem; line-height:1.65; }
+  .hero-actions { gap:12px; }
+  .page-hero { padding:44px 0; }
+  .page-hero p { font-size:1rem; line-height:1.65; }
+  .content-section { padding:52px 0; }
+  .content-grid { gap:28px; }
   .features-section { margin-top:60px; padding:24px 4% 30px; }
+  .features h2 { margin:18px 0 18px; padding-top:16px; font-size:1.85rem; }
   .week-section { padding:26px 4% 32px; margin:60px 0 56px; }
+  .week-section h2 { margin:18px 0 20px; padding-top:16px; font-size:2.5rem; }
+  .week-intro { margin-bottom:28px; line-height:1.7; }
   .reviews-section { padding:52px 0; }
   .reviews-grid { grid-template-columns:1fr; gap:16px; }
-  .reviews-heading { font-size:2.4rem; }
-  .reviews-intro { margin-bottom:36px; }
+  .reviews-heading { font-size:2.1rem; }
+  .reviews-intro { margin-bottom:28px; line-height:1.7; }
   .home-photo-section { width:100%; margin:60px 0 0; padding:0; }
   .home-photo-section img { height:260px; }
   .week-banner img { height:260px; }
   .feature-image { height:160px; }
-  .community-panel { padding:24px; }
+  .community-panel { padding:22px 20px; border-radius:20px; }
   .features article,
   .menu-item.brief,
   .event-card,
@@ -787,6 +798,15 @@ body.neon-mode .event-card {
   .image-card {
     border:1px solid var(--border);
     box-shadow:0 14px 28px rgba(0,0,0,.35);
+  }
+  .features article,
+  .week-card,
+  .review-card,
+  .event-card-body,
+  .contact-box,
+  .hours-card,
+  .map-card {
+    padding:22px 20px;
   }
   .image-card { overflow:visible; }
   .card-content {
@@ -831,6 +851,10 @@ body.neon-mode .event-card {
   .menu-photo-row { grid-template-columns:1fr; gap:14px; }
   .form-row { grid-template-columns:1fr; }
   .footer-inner { grid-template-columns:1fr; }
+  .contact-grid { gap:20px; padding:40px 0; }
+  .hours-map-section { gap:18px; padding-bottom:28px; }
+  .contact-form-section { padding:44px 0; }
+  .contact-form-section h2 { margin-bottom:28px !important; }
   .events-scroll-section { padding:40px 0 20px; }
   .events-scroll-header h2 { font-size:2.2rem; }
   .events-scroll { grid-auto-columns:min(88vw, 340px); }
@@ -847,10 +871,12 @@ body.neon-mode .event-card {
   }
   .events-scroll-next-label { display:none; }
   .event-card-image { height:180px; }
-  .event-card-body { padding:20px; }
   .event-card-large h2 { font-size:1.7rem; }
   .event-photo-card { grid-template-columns:1fr; }
   .event-photo-card img { height:180px; }
+  .event-photo-grid { gap:18px; padding-top:20px; }
+  .event-booking { padding:44px 0 !important; }
+  .event-booking p { margin:14px auto 0 !important; line-height:1.7; }
 }
 @keyframes events-scroll-nudge {
   0%, 100% { transform:translateX(0); }
@@ -862,8 +888,11 @@ body.neon-mode .event-card {
     --menu-scroll-offset: 176px;
   }
   .container { padding:0 14px; }
-  .hero-content { padding:40px 46px; }
-  .hero h1 { font-size:1.85rem; }
+  .mobile-header .brand span { font-size:.98rem; }
+  .hero-content { padding:36px 20px; }
+  .hero h1 { font-size:1.95rem; }
   .btn { width:100%; justify-content:center; }
   .page-hero h1 { font-size:1.8rem; }
+  .features h2 { font-size:1.65rem; }
+  .week-section h2 { font-size:2.1rem; }
 }
