@@ -767,25 +767,27 @@ body.neon-mode .event-card {
   .mobile-header .brand span { font-size:1.08rem; line-height:1.08; letter-spacing:.05em; }
   .nav a { font-size:.9rem; }
   .hero { min-height:auto; }
-  .hero-content { max-width:100%; padding:48px 24px; }
-  .hero h1 { font-size:2.3rem; }
-  .tagline { font-size:1.05rem; }
-  .hero p { font-size:1rem; line-height:1.65; }
+  .hero-content { max-width:100%; padding:42px 22px 86px; }
+  .hero .eyebrow { margin-bottom:14px; font-size:.74rem; letter-spacing:.18em; }
+  .hero h1 { font-size:2.15rem; line-height:1.02; margin-bottom:14px; }
+  .tagline { font-size:1rem; margin-bottom:10px; }
+  .hero p { font-size:1rem; line-height:1.65; margin-bottom:22px; }
+  .hero-lede { font-size:1rem; }
   .hero-actions { gap:12px; }
   .page-hero { padding:44px 0; }
   .page-hero p { font-size:1rem; line-height:1.65; }
   .content-section { padding:52px 0; }
   .content-grid { gap:28px; }
-  .features-section { margin-top:60px; padding:24px 4% 30px; }
+  .features-section { margin-top:32px; padding:20px 4% 24px; }
   .features h2 { margin:18px 0 18px; padding-top:16px; font-size:1.85rem; }
-  .week-section { padding:26px 4% 32px; margin:60px 0 56px; }
+  .week-section { padding:24px 4% 28px; margin:40px 0 44px; }
   .week-section h2 { margin:18px 0 20px; padding-top:16px; font-size:2.5rem; }
   .week-intro { margin-bottom:28px; line-height:1.7; }
-  .reviews-section { padding:52px 0; }
+  .reviews-section { padding:44px 0; }
   .reviews-grid { grid-template-columns:1fr; gap:16px; }
   .reviews-heading { font-size:2.1rem; }
   .reviews-intro { margin-bottom:28px; line-height:1.7; }
-  .home-photo-section { width:100%; margin:60px 0 0; padding:0; }
+  .home-photo-section { width:100%; margin:40px 0 0; padding:0; }
   .home-photo-section img { height:260px; }
   .week-banner img { height:260px; }
   .feature-image { height:160px; }
@@ -844,9 +846,10 @@ body.neon-mode .event-card {
   .menu-item.brief { padding:16px; }
   .item-header { flex-direction:column; align-items:flex-start; gap:4px; }
   .menu-item .price { font-size:1.05rem; }
-  .hero-arrow { width:40px; height:40px; font-size:1.2rem; }
-  .hero-arrow-prev { left:10px; }
-  .hero-arrow-next { right:10px; }
+  .hero-arrow { width:38px; height:38px; font-size:1.1rem; top:auto; bottom:116px; transform:none; }
+  .hero-arrow-prev { left:12px; }
+  .hero-arrow-next { right:12px; }
+  .hero-dots { bottom:16px; }
   .menu-category { padding:20px 16px 18px; margin-bottom:24px; }
   .menu-photo-row { grid-template-columns:1fr; gap:14px; }
   .form-row { grid-template-columns:1fr; }
@@ -889,9 +892,9 @@ body.neon-mode .event-card {
   }
   .container { padding:0 14px; }
   .mobile-header .brand span { font-size:.98rem; }
-  .hero-content { padding:36px 20px; }
-  .hero h1 { font-size:1.95rem; }
-  .btn { width:100%; justify-content:center; }
+  .hero-content { padding:34px 18px 84px; }
+  .hero h1 { font-size:1.82rem; }
+  .btn { width:100%; justify-content:center; padding:15px 22px; font-size:.84rem; }
   .page-hero h1 { font-size:1.8rem; }
   .features h2 { font-size:1.65rem; }
   .week-section h2 { font-size:2.1rem; }
