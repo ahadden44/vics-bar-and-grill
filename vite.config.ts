@@ -16,4 +16,18 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    environments: {
+      client: {
+        build: {
+          outDir: ".output/public",
+        },
+      },
+      server: {
+        build: {
+          outDir: ".output/server",
+        },
+      },
+    },
+  },
 });
