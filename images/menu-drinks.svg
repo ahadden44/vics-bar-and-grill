@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
-  <rect width="720" height="480" fill="#111" />
-  <rect x="120" y="120" width="120" height="210" rx="24" fill="#1a1a1a" />
-  <rect x="340" y="120" width="120" height="210" rx="24" fill="#222" />
-  <rect x="560" y="160" width="60" height="170" rx="18" fill="#d12226" />
-  <text x="360" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" fill="#fff">Drinks</text>
-</svg>
