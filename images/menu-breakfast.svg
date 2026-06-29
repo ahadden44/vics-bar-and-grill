@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
-  <rect width="720" height="480" fill="#111" />
-  <rect x="80" y="120" width="560" height="240" rx="28" fill="#1a1a1a" />
-  <circle cx="240" cy="220" r="42" fill="#d12226" />
-  <circle cx="330" cy="220" r="42" fill="#fff" opacity=".8" />
-  <rect x="410" y="200" width="130" height="80" rx="20" fill="#d12226" />
-  <text x="360" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" fill="#fff">Breakfast</text>
-</svg>

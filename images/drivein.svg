@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
-  <rect width="720" height="480" fill="#111" />
-  <rect x="120" y="240" width="480" height="140" rx="24" fill="#1a1a1a" />
-  <circle cx="230" cy="340" r="50" fill="#d12226" />
-  <circle cx="490" cy="340" r="50" fill="#d12226" />
-  <rect x="200" y="210" width="320" height="80" rx="16" fill="#222" />
-  <text x="360" y="300" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" fill="#fff">Drive-In</text>
-</svg>
